@@ -18,7 +18,7 @@ FRONTEND: Front will be written in eather clojure or angular 4.
 
 ## Options
 
-FIXME: listing of options this app accepts.
+
 
 ## Examples
 
@@ -34,7 +34,5 @@ FIXME: listing of options this app accepts.
 
 ## License
 
-Copyright © 2018 FIXME
+Copyright © Stevan Koncar
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
