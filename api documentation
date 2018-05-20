@@ -1,0 +1,70 @@
+CEX.IO
+https://cex.io/api/last_price/{eur}/{btc}  -> single pair
+https://cex.io/api/currency_limits -> all pairs
+
+{"lprice":"7173","curr1":"BTC","curr2":"EUR"}
+
+[{"base_decimals": 8, "minimum_order": "5.0 USD", "name": "LTC/USD", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "ltcusd", "description": "Litecoin / U.S. dollar"}, {"base_decimals": 8, "minimum_order": "5.0 USD", "name": "ETH/USD", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "ethusd", "description": "Ether / U.S. dollar"}, {"base_decimals": 8, "minimum_order": "5.0 EUR", "name": "XRP/EUR", "counter_decimals": 5, "trading": "Enabled", "url_symbol": "xrpeur", "description": "XRP / Euro"}, {"base_decimals": 8, "minimum_order": "5.0 USD", "name": "BCH/USD", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "bchusd", "description": "Bitcoin Cash / U.S. dollar"}, {"base_decimals": 8, "minimum_order": "5.0 EUR", "name": "BCH/EUR", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "bcheur", "description": "Bitcoin Cash / Euro"}, {"base_decimals": 8, "minimum_order": "5.0 EUR", "name": "BTC/EUR", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "btceur", "description": "Bitcoin / Euro"}, {"base_decimals": 8, "minimum_order": "0.001 BTC", "name": "XRP/BTC", "counter_decimals": 8, "trading": "Enabled", "url_symbol": "xrpbtc", "description": "XRP / Bitcoin"}, {"base_decimals": 5, "minimum_order": "5.0 USD", "name": "EUR/USD", "counter_decimals": 5, "trading": "Enabled", "url_symbol": "eurusd", "description": "Euro / U.S. dollar"}, {"base_decimals": 8, "minimum_order": "0.001 BTC", "name": "BCH/BTC", "counter_decimals": 8, "trading": "Enabled", "url_symbol": "bchbtc", "description": "Bitcoin Cash / Bitcoin"}, {"base_decimals": 8, "minimum_order": "5.0 EUR", "name": "LTC/EUR", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "ltceur", "description": "Litecoin / Euro"}, {"base_decimals": 8, "minimum_order": "5.0 USD", "name": "BTC/USD", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "btcusd", "description": "Bitcoin / U.S. dollar"}, {"base_decimals": 8, "minimum_order": "0.001 BTC", "name": "LTC/BTC", "counter_decimals": 8, "trading": "Enabled", "url_symbol": "ltcbtc", "description": "Litecoin / Bitcoin"}, {"base_decimals": 8, "minimum_order": "5.0 USD", "name": "XRP/USD", "counter_decimals": 5, "trading": "Enabled", "url_symbol": "xrpusd", "description": "XRP / U.S. dollar"}, {"base_decimals": 8, "minimum_order": "0.001 BTC", "name": "ETH/BTC", "counter_decimals": 8, "trading": "Enabled", "url_symbol": "ethbtc", "description": "Ether / Bitcoin"}, {"base_decimals": 8, "minimum_order": "5.0 EUR", "name": "ETH/EUR", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "etheur", "description": "Ether / Euro"}]
+_________________________________________________________________________________
+
+BITSTAMP
+
+https://www.bitstamp.net/api/v2/ticker_hour/btceur/ -> single pair
+https://www.bitstamp.net/api/v2/trading-pairs-info/ -> all pairs
+!important lovercase
+{"high": "7238.00", "last": "7196.00", "timestamp": "1526834945", "bid": "7191.00", "vwap": "7193.51", "volume": "207.61511358", "low": "7100.36", "ask": "7196.00", "open": "7114.99"}
+
+[{"base_decimals": 8, "minimum_order": "5.0 USD", "name": "LTC/USD", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "ltcusd", "description": "Litecoin / U.S. dollar"}, {"base_decimals": 8, "minimum_order": "5.0 USD", "name": "ETH/USD", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "ethusd", "description": "Ether / U.S. dollar"}, {"base_decimals": 8, "minimum_order": "5.0 EUR", "name": "XRP/EUR", "counter_decimals": 5, "trading": "Enabled", "url_symbol": "xrpeur", "description": "XRP / Euro"}, {"base_decimals": 8, "minimum_order": "5.0 USD", "name": "BCH/USD", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "bchusd", "description": "Bitcoin Cash / U.S. dollar"}, {"base_decimals": 8, "minimum_order": "5.0 EUR", "name": "BCH/EUR", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "bcheur", "description": "Bitcoin Cash / Euro"}, {"base_decimals": 8, "minimum_order": "5.0 EUR", "name": "BTC/EUR", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "btceur", "description": "Bitcoin / Euro"}, {"base_decimals": 8, "minimum_order": "0.001 BTC", "name": "XRP/BTC", "counter_decimals": 8, "trading": "Enabled", "url_symbol": "xrpbtc", "description": "XRP / Bitcoin"}, {"base_decimals": 5, "minimum_order": "5.0 USD", "name": "EUR/USD", "counter_decimals": 5, "trading": "Enabled", "url_symbol": "eurusd", "description": "Euro / U.S. dollar"}, {"base_decimals": 8, "minimum_order": "0.001 BTC", "name": "BCH/BTC", "counter_decimals": 8, "trading": "Enabled", "url_symbol": "bchbtc", "description": "Bitcoin Cash / Bitcoin"}, {"base_decimals": 8, "minimum_order": "5.0 EUR", "name": "LTC/EUR", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "ltceur", "description": "Litecoin / Euro"}, {"base_decimals": 8, "minimum_order": "5.0 USD", "name": "BTC/USD", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "btcusd", "description": "Bitcoin / U.S. dollar"}, {"base_decimals": 8, "minimum_order": "0.001 BTC", "name": "LTC/BTC", "counter_decimals": 8, "trading": "Enabled", "url_symbol": "ltcbtc", "description": "Litecoin / Bitcoin"}, {"base_decimals": 8, "minimum_order": "5.0 USD", "name": "XRP/USD", "counter_decimals": 5, "trading": "Enabled", "url_symbol": "xrpusd", "description": "XRP / U.S. dollar"}, {"base_decimals": 8, "minimum_order": "0.001 BTC", "name": "ETH/BTC", "counter_decimals": 8, "trading": "Enabled", "url_symbol": "ethbtc", "description": "Ether / Bitcoin"}, {"base_decimals": 8, "minimum_order": "5.0 EUR", "name": "ETH/EUR", "counter_decimals": 2, "trading": "Enabled", "url_symbol": "etheur", "description": "Ether / Euro"}]
+___________________________________________________
+BITPHEONIX
+https://api.bitfinex.com/v2/tickers?symbols=tBTCEUR
+https://api.bitfinex.com/v2/tickers?symbols=tBTCEUR,tBTCEUR
+
+https://api.bitfinex.com/v1/symbols
+
+[["tBTCEUR",7194.3,20.42309207,7194.5,84.50239666,150.45188,0.0214,7194.45188,546.22741989,7249.6,6943.4]]
+
+[
+["tBTCEUR",7194.3,20.42309207,7194.5,84.50239666,150.45188,0.0214,7194.45188,546.22741989,7249.6,6943.4],
+["tBTCUSD",8469.9,35.64846093,8470,75.09586694,172.06403549,0.0207,8470,14003.51905119,8535,8171.5]
+]
+
+["btcusd","ltcusd","ltcbtc","ethusd","ethbtc","etcbtc","etcusd","rrtusd","rrtbtc","zecusd","zecbtc","xmrusd","xmrbtc","dshusd","dshbtc","btceur","btcjpy","xrpusd","xrpbtc","iotusd","iotbtc","ioteth","eosusd","eosbtc","eoseth","sanusd","sanbtc","saneth","omgusd","omgbtc","omgeth","bchusd","bchbtc","bcheth","neousd","neobtc","neoeth","etpusd","etpbtc","etpeth","qtmusd","qtmbtc","qtmeth","avtusd","avtbtc","avteth","edousd","edobtc","edoeth","btgusd","btgbtc","datusd","datbtc","dateth","qshusd","qshbtc","qsheth","yywusd","yywbtc","yyweth","gntusd","gntbtc","gnteth","sntusd","sntbtc","snteth","ioteur","batusd","batbtc","bateth","mnausd","mnabtc","mnaeth","funusd","funbtc","funeth","zrxusd","zrxbtc","zrxeth","tnbusd","tnbbtc","tnbeth","spkusd","spkbtc","spketh","trxusd","trxbtc","trxeth","rcnusd","rcnbtc","rcneth","rlcusd","rlcbtc","rlceth","aidusd","aidbtc","aideth","sngusd","sngbtc","sngeth","repusd","repbtc","repeth","elfusd","elfbtc","elfeth","btcgbp","etheur","ethjpy","ethgbp","neoeur","neojpy","neogbp","eoseur","eosjpy","eosgbp","iotjpy","iotgbp","iosusd","iosbtc","ioseth","aiousd","aiobtc","aioeth","requsd","reqbtc","reqeth","rdnusd","rdnbtc","rdneth","lrcusd","lrcbtc","lrceth","waxusd","waxbtc","waxeth","daiusd","daibtc","daieth","cfiusd","cfibtc","cfieth","agiusd","agibtc","agieth","bftusd","bftbtc","bfteth","mtnusd","mtnbtc","mtneth","odeusd","odebtc","odeeth","antusd","antbtc","anteth","dthusd","dthbtc","dtheth","mitusd","mitbtc","miteth","stjusd","stjbtc","stjeth","xlmusd","xlmeur","xlmjpy","xlmgbp","xlmbtc","xlmeth","xvgusd","xvgeur","xvgjpy","xvggbp","xvgbtc","xvgeth","bciusd","bcibtc","mkrusd","mkrbtc","mkreth","venusd","venbtc","veneth","kncusd","kncbtc","knceth","poausd","poabtc","poaeth"]
+
+
+////////////////////DATA POSITIONS IN SINGLE PAIR ARRAY/////////////////////// 
+[
+  // on trading pairs (ex. tBTCUSD)
+  [
+    SYMBOL,
+    BID, 
+    BID_SIZE, 
+    ASK, 
+    ASK_SIZE, 
+    DAILY_CHANGE, 
+    DAILY_CHANGE_PERC, 
+    LAST_PRICE, 
+    VOLUME, 
+    HIGH, 
+    LOW
+  ],
+  // on funding currencies (ex. fUSD)
+  [
+    SYMBOL,
+    FRR, 
+    BID, 
+    BID_SIZE, 
+    BID_PERIOD,
+    ASK, 
+    ASK_SIZE,
+    ASK_PERIOD,
+    DAILY_CHANGE,
+    DAILY_CHANGE_PERC, 
+    LAST_PRICE,
+    VOLUME,
+    HIGH, 
+    LOW
+  ],
+  ...
+]
+_____________________________________________________________________________

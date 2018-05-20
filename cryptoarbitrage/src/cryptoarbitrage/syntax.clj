@@ -1,5 +1,6 @@
 (ns cryptoarbitrage.syntax
   (:require [clojure.string :as str]))
+(use 'clojure.java.io)
 
 (def _long 10)
 (def _double 12.3)
@@ -226,3 +227,74 @@
     (println x)
     )
   )
+
+;;working with files
+(defn write-to-file
+  [fileName textToWrite]
+  (with-open [wrtr (writer fileName)]
+    (.write wrtr textToWrite))
+  )
+;;working with files
+(defn read-from-file
+  [fileName]
+  (try
+    (println (slurp fileName)))
+
+  )
+
+(defn append-to-file
+  [fileName text]
+  (with-open [wrtr (writer fileName :append true)]
+    (.write wrtr text))
+  )
+
+(defn read-line-from-file
+  [fileName]
+  (with-open [rdr (reader fileName)]
+    (doseq [line (line-seq rdr)]
+      (println line))))
+
+;;destructioning -> binding data values to symbols
+(defn destruct
+  []
+  (def vecVals [1 2 3 4])
+  (let [[one two & the-rest] vecVals]
+    (println one two the-rest))
+
+  )
+
+(defn struct-map-ex
+  []
+  (defstruct Customer :Name :Phone)
+  (def cust1 (struct Customer "Doug" 12312313123))
+  (def cust2 (struct-map Customer :Name "Sally" :Phone 1231231))
+  (println cust1)
+  (println (:Name cust2))
+  )
+
+;;anonimus fuctions fn[]
+;;#compact functions
+
+;;(take-while neg? [-1 0 1])
+;;(drop-while neg? [-1 0 1])
+;;(filter #(> % 2) [1 2 3 4])
+
+;;macros
+;;generate code inline if argument should be valuated
+
+(defmacro discount
+  ([cond dis1 dis2]
+   (list 'if cond dis1 dis2)))
+
+(defn discountCaller
+  []
+  (discount (> 25 65) (println "10% off") (println "Full price")))
+
+(defmacro reg-math
+  [calc]
+  (list (second calc) (first calc) (nth calc 2)))
+
+(defmacro do-more
+  [cond & body]
+  (list 'if cond (cons 'do body)))
+
