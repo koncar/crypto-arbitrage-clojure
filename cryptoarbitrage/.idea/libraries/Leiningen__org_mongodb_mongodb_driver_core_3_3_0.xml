@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: org.mongodb/mongodb-driver-core:3.3.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

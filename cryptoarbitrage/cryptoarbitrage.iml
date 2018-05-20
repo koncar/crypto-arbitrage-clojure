@@ -16,6 +16,9 @@
     <orderEntry type="library" name="Leiningen: clj-http:3.9.0" level="project" />
     <orderEntry type="library" name="Leiningen: clj-tuple:0.2.2" level="project" />
     <orderEntry type="library" name="Leiningen: clojure-complete:0.2.4" level="project" />
+    <orderEntry type="library" name="Leiningen: clojurewerkz/support:1.1.0" level="project" />
+    <orderEntry type="library" name="Leiningen: com.google.guava/guava:18.0" level="project" />
+    <orderEntry type="library" name="Leiningen: com.novemberain/monger:3.1.0" level="project" />
     <orderEntry type="library" name="Leiningen: commons-codec:1.11" level="project" />
     <orderEntry type="library" name="Leiningen: commons-io:2.6" level="project" />
     <orderEntry type="library" name="Leiningen: commons-logging:1.2" level="project" />
@@ -28,6 +31,9 @@
     <orderEntry type="library" name="Leiningen: org.clojure/clojure:1.8.0" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/data.json:0.2.6" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.nrepl:0.2.12" level="project" />
+    <orderEntry type="library" name="Leiningen: org.mongodb/bson:3.3.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.mongodb/mongodb-driver-core:3.3.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.mongodb/mongodb-driver:3.3.0" level="project" />
     <orderEntry type="library" name="Leiningen: potemkin:0.4.5" level="project" />
     <orderEntry type="library" name="Leiningen: riddley:0.1.12" level="project" />
     <orderEntry type="library" name="Leiningen: slingshot:0.12.2" level="project" />
