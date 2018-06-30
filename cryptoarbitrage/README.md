@@ -1,36 +1,30 @@
 # cryptoarbitrage
 
-The idea of a project is to have a service that would provide circles for trading crypto currencies between different exchanges.
-Service would list all possible circles and also calculate potential profit that users can make with following those trading paterns.
+The idea of a project is to have a service that would provide positive profit circles for trading crypto currencies between different exchanges.
+Service would list all possible circles and also calculate potential profit that users can make by following those trading paterns.
 
-BACKEND: Service is written in clojure and functions as REST web server. It will use MongoDB or PostgreSQL for storing data.
+At first 
 
-FRONTEND: Front will be written in eather clojure or angular 4.
+BACKEND: Service is written in clojure and works as REST web server. It will use MongoDB for storing data.
+
+FRONTEND: Front will be written in eather Clojure or Angular 4.
 
 
 ## Installation
 
-
+BACK-END
+run lein REPL
 
 ## Usage
 
+run following commands in the repl:
 
+(require '[cryptoarbitrage.core :as c])
+(def server (c/init-server))
 
-## Options
-
-
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+rerun project
+(c/stop-server server)
+(def server (c/init-server))
 
 ## License
 

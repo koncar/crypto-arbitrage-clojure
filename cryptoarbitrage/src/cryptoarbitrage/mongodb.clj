@@ -30,6 +30,7 @@
     )
   )
 
+
 (defn find-all
   [collection query]
   (let [coll collection]
