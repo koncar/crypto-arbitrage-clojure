@@ -33,18 +33,21 @@
      password (doto (:password json_body))
      name (doto (:name json_body))
      username (doto (:username json_body))
+     country (doto (:country json_body))
      ]
-    (if (and (not(str/blank? email)) (not(str/blank? password)) (not (str/blank? name)) (not (str/blank? username)))
-              (if (mongo/find "users" {:email email})
-                (helper/form-fail {:message "That email is already used"})
-                (do (mongo/insert "users" (assoc json_body :id (helper/uuid)))
-                    (helper/form-success {:message "User successfully registered"})))
-              (helper/form-fail {:message "Email, password, username and name cannot be empty"}))
+    (if (and (not(str/blank? email)) (not(str/blank? password)) (not (str/blank? name)) (not (str/blank? username))  (not (nil? country)))
+      (if (mongo/find "countries" {:_id (:_id country)})
+        (if (mongo/find "users" {:email email})
+         (helper/form-fail {:message "That email is already used"})
+         (do (mongo/insert "users" (assoc json_body :_id (helper/uuid)))
+             (helper/form-success {:message "User successfully registered"})))
+        (helper/form-fail {:message "That country doesn't exist"}))
+      (helper/form-fail {:message "Email, password, username, country and name cannot be empty"}))
     )
 )
 (defn get_me [id]
   (if (and (not (str/blank? id)))
-    (let [doc_user (mongo/find "users" {:id id})]
+    (let [doc_user (mongo/find "users" {:_id id})]
       (if doc_user
         (helper/form-success (apply dissoc doc_user [:_id]))
         (helper/form-fail {:message "User doesn't exist"})))
@@ -58,21 +61,23 @@
         password (doto (:password json_body))
         name (doto (:name json_body))
         username (doto (:username json_body))
+        country (doto (:country json_body))
         ]
-       (if (and (not(str/blank? email)) (not(str/blank? password)) (not (str/blank? name)) (not (str/blank? username)))
-         (if (mongo/find "users" {:id id})
-           (do (mongo/update "users" {:id id} (assoc json_body :id id))
-               (helper/form-success {:message "User successfully updated"}))
+       (if (and (not(str/blank? email)) (not(str/blank? password)) (not (str/blank? name)) (not (str/blank? username)) (not (nil? country)))
+         (if (mongo/find "users" {:_id id})
+           (if (not (nil? (mongo/find "countries" {:_id (:_id country)})))
+             (do (mongo/update "users" {:_id id} (assoc json_body :_id id))
+                (helper/form-success {:message "User successfully updated"}))
+             (helper/form-fail {:message "That country doesn't exist"}))
            (helper/form-fail {:message "That id is not found"}))
-
-         (helper/form-fail {:message "Email, password, username and name cannot be empty"}))
+         (helper/form-fail {:message "Email, password, username, country and name cannot be empty"}))
        )
      )
 
 
 (defn upload-profile-picture
   [id req]
-  (if (not (nil? (mongo/find "users" {:id id})))
+  (if (not (nil? (mongo/find "users" {:_id id})))
     (if (and (not (nil? (:body req))))
       (let [picture (helper/slurp-bytes (:body req))]
        (if (and (not (nil? picture)) (not (<= (count picture) 17)))
