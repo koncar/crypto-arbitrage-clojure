@@ -23,31 +23,33 @@
   [col document]
   (mc/insert db col document))
 
+;;query->{:key :value, :key1 :value}
 (defn find
   [collection query]
-  (let [coll collection]
-    (mc/find-one-as-map db coll query)
-    )
+  (mc/find-one-as-map db collection query)
   )
 
 
 (defn find-all
-  [collection query]
-  (let [coll collection]
-    (mc/find coll query)
-    )
+  [collection & query]
+  (mc/find-maps db collection query)
   )
 
 (defn remove
   [collection query]
-  (let [coll collection]
-    (mc/remove db coll query)
-    )
+  (mc/remove db collection query)
   )
 
 (defn update
   [collection query newdocument]
-  (let [coll collection]
-    (mc/update db coll query newdocument)
-    )
+  (mc/update db collection query newdocument)
   )
+
+(defn drop
+  [collection]
+  (mc/drop db collection)
+  )
+
+(defn dissconnect
+  []
+  (mg/disconnect conn))
