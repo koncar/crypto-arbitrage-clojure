@@ -5,6 +5,7 @@
             [cryptoarbitrage.handler-helper :as helper]
             [clj-http.client :as client]
             [clojure.java.io :as io]
+            [cryptoarbitrage.cryptoapis :as apis]
             ))
 
 (defn login [req]
@@ -107,12 +108,43 @@
          (loop [x 0]
            (when (< x (count all_countries))
              (mongo/insert "countries" (assoc (select-keys (get all_countries x) [:name :alpha2Code :alpha3Code]) :_id (:alpha2Code (get all_countries x))))
-             (recur (+ x 1))))
+             (recur (+ x 1)))
+           )
          )
        (helper/form-success {:message "Successfully populated countries"})
        )
      (helper/form-fail {:message "Wrong password"})
      ))
+  )
+
+(defn populate_exchanges [req]
+  (let [json_body (doto (helper/read-body req))
+        password (doto (:password json_body))]
+    (if (= password "admin")
+      (do
+        (mongo/drop "exchanges")
+        (mongo/insert "exchanges" {:_id "CEX" :name "CEX.IO" :website "https://cex.io/" })
+        (mongo/insert "exchanges" {:_id "BST" :name "BitStamp" :website "https://www.bitstamp.net/" })
+        (mongo/insert "exchanges" {:_id "BFX" :name "BitFinex" :website "https://www.bitfinex.com/" })
+        (helper/form-success {:message "Successfully populated exchanges"})
+        )
+      (helper/form-fail {:message "Wrong password"})
+      ))
+  )
+
+(defn populate_pairs [req]
+  (let [json_body (doto (helper/read-body req))
+        password (doto (:password json_body))]
+    (if (= password "admin")
+      (do (mongo/drop "pairs")
+          (apis/cex_io-populate-all-pairs false)
+          (apis/bit_stamp-populate-all-pairs false)
+          (apis/bit_finex-populate-all-pairs false)
+          (helper/form-success {:message "Successfully populated pairs"})
+          )
+      (helper/form-fail {:message "Wrong password"})
+      )
+    )
   )
 
 (defn not_found []

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: uncomplicate/neanderthal:0.20.4">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/uncomplicate/neanderthal/0.20.4/neanderthal-0.20.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

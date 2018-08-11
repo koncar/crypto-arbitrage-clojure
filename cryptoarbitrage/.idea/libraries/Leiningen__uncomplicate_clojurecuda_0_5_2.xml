@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: uncomplicate/clojurecuda:0.5.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/uncomplicate/clojurecuda/0.5.2/clojurecuda-0.5.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

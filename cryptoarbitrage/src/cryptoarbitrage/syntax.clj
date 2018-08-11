@@ -169,6 +169,8 @@
     (println "no")
     (println "yes"))
   )
+
+
 (defn can-do-more
   [age]
   (if (>= age 18)
@@ -184,6 +186,7 @@
     (println "2nd")
     )
   )
+;;switch like
 (defn what-grade
   [n]
   (cond
