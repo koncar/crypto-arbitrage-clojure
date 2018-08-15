@@ -4,7 +4,9 @@
 (defn form-response
   [status-code body & content-type]
   {:status  status-code
-   :headers (if content-type {"Content-Type" content-type} {"Content-Type" "application/json"})
+   :headers (if content-type
+              {"Content-Type" content-type "Access-Control-Allow-Origin" "*" "Access-Control-Allow-Methods" "GET,POST,PUT,DELETE"}
+              {"Content-Type" "application/json" "Access-Control-Allow-Origin" "*" "Access-Control-Allow-Methods" "GET,POST,PUT,DELETE"})
    :body   body}
   )
 (defn form-json_body

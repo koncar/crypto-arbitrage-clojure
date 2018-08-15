@@ -36,6 +36,7 @@
      username (doto (:username json_body))
      country (doto (:country json_body))
      ]
+    (println "got register")
     (if (and (not(str/blank? email)) (not(str/blank? password)) (not (str/blank? name)) (not (str/blank? username))  (not (nil? country)))
       (if (mongo/find "countries" {:_id (:_id country)})
         (if (mongo/find "users" {:email email})
@@ -107,7 +108,10 @@
        (let [all_countries (json/read-json (:body (client/get "https://restcountries.eu/rest/v2/all")))]
          (loop [x 0]
            (when (< x (count all_countries))
-             (mongo/insert "countries" (assoc (select-keys (get all_countries x) [:name :alpha2Code :alpha3Code]) :_id (:alpha2Code (get all_countries x))))
+             (mongo/insert "countries" (assoc (select-keys (get all_countries x) [:name :alpha2Code :alpha3Code]) :_id (:alpha2Code (get all_countries x))
+                                                                                                                  :id (:alpha2Code (get all_countries x))
+                                                                                                                  :label (:name (get all_countries x))
+                                                                                                                  :group (get (:name (get all_countries x)) 0)))
              (recur (+ x 1)))
            )
          )

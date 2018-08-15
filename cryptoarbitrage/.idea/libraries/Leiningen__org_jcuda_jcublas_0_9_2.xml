@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Leiningen: org.jcuda/jcublas:0.9.2">
-    <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/jcuda/jcublas/0.9.2/jcublas-0.9.2.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

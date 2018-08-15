@@ -8,8 +8,13 @@
   )
 ;; :as -> require entire name space
 ;; :refer -> takes only symbols and transfers it into working namespace
+(defn -main
+  [& args]
+  (println "Server started"))
+
 (defn app []
   (routes
+
     (GET "/get-me/:id" [id] (handler/get_me id))
     (GET "/get-countries" [] (handler/get_countries))
     (POST "/populate-countries" req (handler/populate_countries req))
@@ -31,3 +36,5 @@
   []
   (server/run-server (app) {:port 8080}))
 
+
+(def server (init-server))
