@@ -14,16 +14,17 @@
 
 (defn app []
   (routes
-
     (GET "/get-me/:id" [id] (handler/get_me id))
     (GET "/get-countries" [] (handler/get_countries))
     (POST "/populate-countries" req (handler/populate_countries req))
     (POST "/populate-exchanges" req (handler/populate_exchanges req))
     (POST "/populate-pairs" req (handler/populate_pairs req))
     (POST "/update-me/:id" [id :as req] (handler/update_me id req))
+    (POST "/change-password/:id" [id :as req] (handler/change-password id req))
     (POST "/register" req (handler/register req))
     (POST "/login" req (handler/login req))
     (POST "/upload-profile-picture/:id" [id :as req] (handler/upload-profile-picture id req))
+    (route/resources "/")
     (route/not-found (handler/not_found))
     )
   )
@@ -37,4 +38,4 @@
   (server/run-server (app) {:port 8080}))
 
 
-(def server (init-server))
+(defonce server (init-server))

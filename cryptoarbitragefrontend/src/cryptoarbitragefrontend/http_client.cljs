@@ -1,33 +1,63 @@
 (ns cryptoarbitragefrontend.http-client
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [cljs-http.client :as client]
-            [cljs.core.async :refer [<!]])
+            [cljs.core.async :refer [<!]]
+            )
   )
 
 (defn get-resource
-  [url callback]
+  [url success-callback fail-callback]
   (go (let [response (<! (client/get url
                                      {:with-credentials? false}))]
-         (callback (:body response)))
+        (println (:body response))
+        (if (= (:status response) 200)
+          (success-callback (:body response))
+          (fail-callback (:body response))
+          )
+        )
       )
   (println "get called: " url)
   )
 
 (defn post-resource
-  [url body]
-  ;(client/post url
-  ;             {
-  ;              :json-params body
-  ;              :with-credentials? false
-  ;              }
-  ;             )
-  (go (let [response (<! (client/post "http://localhost:8080/register"
-                                      {:json-params body}
-                                   ))]
+  [url body success-callback fail-callback]
+  (go (let [response (<! (client/post url
+                                      {:with-credentials? false
+                                       :body              (js/JSON.stringify (clj->js body))
+                                       }
+                                      )
+                         )
+            ]
         (println (:body response))
+        (if (= (:status response) 200)
+          (success-callback (:body response))
+          (fail-callback (:body response))
+          )
+        )
+        )
+  (println "post called: " url)
+  (println "body" body)
+  )
+
+(defn post-image
+  [url body success-callback fail-callback]
+  (go (let [response (<! (client/post url
+                                      {:with-credentials? false
+                                       :body              body
+                                       }
+                                      )
+                         )
+            ]
+        (println (:body response))
+        (if (= (:status response) 200)
+          (success-callback (:body response))
+          (fail-callback (:body response))
+          )
         )
       )
   (println "post called: " url)
   (println "body" body)
   )
+
+
 

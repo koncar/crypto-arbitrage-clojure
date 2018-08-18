@@ -19,7 +19,9 @@
             doc_password (doto (:password doc_user))]
         (if doc_user
           (if (= doc_password password)
-            (helper/form-success {:message "User successfully logged in"})
+            (helper/form-success {:message "User successfully logged in"
+                                  :user doc_user
+                                  })
             (helper/form-fail  {:message "Wrong password"}))
           (helper/form-fail {:message "User not found"})))
       (helper/form-fail {:message "Email and password cannot be empty"})
@@ -35,15 +37,27 @@
      name (doto (:name json_body))
      username (doto (:username json_body))
      country (doto (:country json_body))
+     admin (doto (if (= "admin_password" (:admin_password json_body)) true false ))
+     _id (doto (helper/uuid))
      ]
-    (println "got register")
+    (println "got register " json_body)
+    (println admin)
+    (println :admin_password json_body)
     (if (and (not(str/blank? email)) (not(str/blank? password)) (not (str/blank? name)) (not (str/blank? username))  (not (nil? country)))
-      (if (mongo/find "countries" {:_id (:_id country)})
-        (if (mongo/find "users" {:email email})
-         (helper/form-fail {:message "That email is already used"})
-         (do (mongo/insert "users" (assoc json_body :_id (helper/uuid)))
-             (helper/form-success {:message "User successfully registered"})))
-        (helper/form-fail {:message "That country doesn't exist"}))
+      (let [country (mongo/find "countries" {:_id (:_id country)})]
+        (if country
+         (if (mongo/find "users" {:email email})
+           (helper/form-fail {:message "That email is already used"})
+           (do (mongo/insert "users" (-> json_body
+                                         (assoc :_id _id)
+                                         (assoc :admin admin)
+                                         (assoc :country country)))
+               (helper/form-success {:message "User successfully registered"
+                                     :user    (-> json_body
+                                                  (assoc :_id _id)
+                                                  (assoc :admin admin)
+                                                  (assoc :country country))})))
+         (helper/form-fail {:message "That country doesn't exist"})))
       (helper/form-fail {:message "Email, password, username, country and name cannot be empty"}))
     )
 )
@@ -67,14 +81,32 @@
         ]
        (if (and (not(str/blank? email)) (not(str/blank? password)) (not (str/blank? name)) (not (str/blank? username)) (not (nil? country)))
          (if (mongo/find "users" {:_id id})
-           (if (not (nil? (mongo/find "countries" {:_id (:_id country)})))
-             (do (mongo/update "users" {:_id id} (assoc json_body :_id id))
-                (helper/form-success {:message "User successfully updated"}))
-             (helper/form-fail {:message "That country doesn't exist"}))
+           (let [new_country (mongo/find "countries" {:_id (:_id country)})]
+             (if new_country
+              (do (mongo/update "users" {:_id id} (-> json_body
+                                                      (assoc :_id id)
+                                                      (assoc :country new_country)))
+                  (helper/form-success {:message "User successfully updated"
+                                        :user (-> json_body
+                                                  (assoc :_id id)
+                                                  (assoc :country new_country))}))
+              (helper/form-fail {:message "That country doesn't exist"})))
            (helper/form-fail {:message "That id is not found"}))
          (helper/form-fail {:message "Email, password, username, country and name cannot be empty"}))
        )
      )
+
+(defn change-password [id req]
+  (let [json_body (doto (helper/read-body req))
+        password (doto (:password json_body))]
+    (if (not (str/blank? password))
+      (let [user (mongo/find "users" {:_id id})]
+        (mongo/update "users" {:_id id} (assoc user :password password))
+        (helper/form-success {:message "Successful password update"})
+        )
+      (helper/form-fail "Password cannot be empty")
+      )
+    ))
 
 
 (defn upload-profile-picture
@@ -84,9 +116,9 @@
       (let [picture (helper/slurp-bytes (:body req))]
        (if (and (not (nil? picture)) (not (<= (count picture) 17)))
          (do
-           (when (not (.exists (io/file "photos")))
-             (.mkdir (io/file "photos")))
-           (with-open [w (io/output-stream (str "photos/" id ".jpg"))]
+           (when (not (.exists (io/file "resources/public/profilepictures")))
+             (.mkdir (io/file "resources/public/profilepictures")))
+           (with-open [w (io/output-stream (str "resources/public/profilepictures/" id ".jpg"))]
              (.write w picture))
            (helper/form-success {:message "Successfully uploaded profile picture"})
            )

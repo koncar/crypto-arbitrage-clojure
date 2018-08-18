@@ -187,7 +187,7 @@
             (swap! page-state assoc :page :home))
 
   (defroute "/about" []
-            (swap! page-state assoc :page :about))
+            (swap! page-state assoc :page :home-logged))
 
   (defroute "/todo" []
             (swap! page-state assoc :page :todo))
@@ -218,7 +218,7 @@
 
 (defmethod current-page :home []
   [home])
-(defmethod current-page :about []
+(defmethod current-page :home-logged []
   [about])
 (defmethod current-page :todo []
   [todo])

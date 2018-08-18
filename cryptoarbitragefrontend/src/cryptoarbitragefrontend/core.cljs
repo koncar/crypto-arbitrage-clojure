@@ -2,16 +2,16 @@
    (:require-macros [cljs.core.async.macros :refer [go]]
                     [secretary.core :refer [defroute]])
    (:import goog.history.Html5History)
-    (:require
-      [cljs-http.client :as client]
-      [reagent.core :as reagent]
-      [secretary.core :as secretary]
-      [goog.events :as events]
-      [goog.history.EventType :as EventType]
-      [cryptoarbitragefrontend.pages :as pages]
-      [cryptoarbitragefrontend.http-client :as cli]
-      [re-com.box :as box]
-      ))
+  (:require
+    [cljs-http.client :as client]
+    [reagent.core :as reagent]
+    [secretary.core :as secretary]
+    [goog.events :as events]
+    [goog.history.EventType :as EventType]
+    [cryptoarbitragefrontend.pages :as pages]
+    [cryptoarbitragefrontend.http-client :as cli]
+    [re-com.box :as box]
+    [cryptoarbitragefrontend.comp_general :as comp_general]))
 
 (enable-console-print!)
 
@@ -32,16 +32,45 @@
   (defroute "/" []
             (swap! page-state assoc :page :home))
 
-  (defroute "/about" []
-            (swap! page-state assoc :page :about))
+  (defroute "/home" []
+            (swap! page-state assoc :page :home-logged))
+
+  (defroute "/me" []
+            (swap! page-state assoc :page :profile))
+
+  (defroute "/blog" []
+            (swap! page-state assoc :page :blog))
 
   (hook-browser-navigation!))
 
 (defmethod current-page :home []
-  [pages/home])
 
-(defmethod current-page :about []
-  [pages/about])
+  (if (comp_general/is_user_logged)
+    [pages/home-logged]
+    [pages/home]
+    )
+  )
+
+(defmethod current-page :home-logged []
+  (if (comp_general/is_user_logged)
+    [pages/home-logged]
+    [pages/home]
+    )
+  )
+
+(defmethod current-page :profile []
+  (if (comp_general/is_user_logged)
+    [pages/my-profile]
+    [pages/home]
+    )
+  )
+
+(defmethod current-page :blog []
+  (if (comp_general/is_user_logged)
+    [pages/blog]
+    [pages/home]
+    )
+  )
 
 (defmethod current-page :default []
   [pages/not-found])

@@ -2,37 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b79300a2-9d92-417a-a998-272697d9b1ee" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../cryptoarbitragefrontend/.idea/libraries/Leiningen__cljsjs_create_react_class_15_6_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cryptoarbitragefrontend/.idea/libraries/Leiningen__cljsjs_react_16_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cryptoarbitragefrontend/.idea/libraries/Leiningen__cljsjs_react_dom_16_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cryptoarbitragefrontend/.idea/libraries/Leiningen__cljsjs_react_dom_server_16_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cryptoarbitragefrontend/.idea/libraries/Leiningen__reagent_0_8_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_commons_commons_math3_3_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_core_async_0_4_474.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_core_cache_0_6_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_core_memoize_0_5_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_data_priority_map_0_0_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_tools_analyzer_0_6_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_tools_analyzer_jvm_0_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_tools_reader_1_0_0_beta4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_jcuda_jcublas_0_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_jcuda_jcublas_natives_0_9_2_windows_x86_64.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_jcuda_jcuda_0_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_jcuda_jcuda_natives_0_9_2_windows_x86_64.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_jocl_jocl_2_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_jocl_jocl_blast_1_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_ow2_asm_asm_all_4_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__uncomplicate_clojurecl_0_10_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__uncomplicate_clojurecuda_0_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__uncomplicate_commons_0_6_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__uncomplicate_fluokitten_0_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__uncomplicate_neanderthal_0_20_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__uncomplicate_neanderthal_native_0_20_0.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cryptoarbitragefrontend/src/cryptoarbitragefrontend/comp_general.cljs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cryptoarbitrage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cryptoarbitrage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/bae14525-6823-42f5-8c17-ca92caf43410.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cryptoarbitrage/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/cryptoarbitrage/core.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cryptoarbitrage/handler.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/cryptoarbitrage/handler.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cryptoarbitrage/handler_helper.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/cryptoarbitrage/handler_helper.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoarbitragefrontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoarbitragefrontend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoarbitragefrontend/resources/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoarbitragefrontend/resources/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoarbitragefrontend/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoarbitragefrontend/resources/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoarbitragefrontend/src/cryptoarbitragefrontend/components.cljs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoarbitragefrontend/src/cryptoarbitragefrontend/core.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoarbitragefrontend/src/cryptoarbitragefrontend/core.cljs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoarbitragefrontend/src/cryptoarbitragefrontend/http_client.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoarbitragefrontend/src/cryptoarbitragefrontend/http_client.cljs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoarbitragefrontend/src/cryptoarbitragefrontend/pages.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoarbitragefrontend/src/cryptoarbitragefrontend/pages.cljs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cryptoarbitragefrontend/src/cryptoarbitragefrontend/syntax.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoarbitragefrontend/src/cryptoarbitragefrontend/syntax.cljs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="project.clj" pinned="false" current-in-tab="true">
+      <file leaf-file-name="project.clj" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state>
               <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
@@ -58,17 +40,26 @@
       <file leaf-file-name="core.clj" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+            <state relative-caret-position="442">
+              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="handler.clj" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mongodb.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/mongodb.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="handler.clj" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/handler.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="129" column="86" lean-forward="true" selection-start-line="129" selection-start-column="86" selection-end-line="129" selection-end-column="86" />
+            <state relative-caret-position="274">
+              <caret line="120" column="81" selection-start-line="120" selection-start-column="81" selection-end-line="120" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -76,8 +67,8 @@
       <file leaf-file-name="handler_helper.clj" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/handler_helper.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+            <state>
+              <caret column="34" selection-start-column="34" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -85,8 +76,8 @@
       <file leaf-file-name="syntax.clj" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/syntax.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="67" column="12" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="12" />
+            <state relative-caret-position="308">
+              <caret line="50" column="10" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -118,6 +109,9 @@
       <find>find-all</find>
       <find>if</find>
       <find>vector</find>
+      <find>login</find>
+      <find>list</find>
+      <find>update_me</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -134,8 +128,8 @@
         <option value="$PROJECT_DIR$/src/cryptoarbitrage/syntax.clj" />
         <option value="$PROJECT_DIR$/project.clj" />
         <option value="$PROJECT_DIR$/src/cryptoarbitrage/cryptoapis.clj" />
-        <option value="$PROJECT_DIR$/src/cryptoarbitrage/core.clj" />
         <option value="$PROJECT_DIR$/src/cryptoarbitrage/handler_helper.clj" />
+        <option value="$PROJECT_DIR$/src/cryptoarbitrage/core.clj" />
         <option value="$PROJECT_DIR$/src/cryptoarbitrage/handler.clj" />
       </list>
     </option>
@@ -159,9 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,6 +163,11 @@
             <path>
               <item name="cryptoarbitrage" type="b2602c69:ProjectViewProjectNode" />
               <item name="cryptoarbitrage" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cryptoarbitrage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cryptoarbitrage" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -180,10 +176,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="cryptoarbitrage" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cryptoarbitrage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cryptoarbitrage" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -198,9 +202,19 @@
     <property name="nodejs.mocha.mocha_node_package_dir" value="" />
     <property name="nodejs.protractor.protractor_package" value="" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="ReplState" timestamp="1534375504614">{:repl-history {:ide [], :local [{:command &quot;(c/stop-server server\n               )&quot;, :offset 37, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(c/stop-server server\n               \n               )&quot;, :offset 53, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(apply dissoc {:_id id :user username})&quot;, :offset 39, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(apply dissoc {:_id \&quot;id\&quot; :user \&quot;username\&quot;})&quot;, :offset 43, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(apply dissoc {:_id \&quot;id\&quot; :user \&quot;username\&quot;} [:bla])&quot;, :offset 50, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(apply dissoc {:_id \&quot;id\&quot; :user \&quot;username\&quot;} [:_id])&quot;, :offset 48, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(dissoc {:_id \&quot;id\&quot; :user \&quot;username\&quot;} [:_id])&quot;, :offset 1, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(require '[cryptoarbitrage.mongodb :as mongo])&quot;, :offset 46, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(mongo/drop \&quot;countries\&quot;)&quot;, :offset 22, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(require '[cryptoarbitrage.core :as c])\n(def server (c/init-server))&quot;, :offset 68, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(require '[cryptoarbitrage.cryptoapis :as api])&quot;, :offset 47, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/cex-io-price \&quot;btc\&quot; \&quot;eur\&quot;)&quot;, :offset 30, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println api/cex-io-price \&quot;btc\&quot; \&quot;eur\&quot;)&quot;, :offset 38, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println api/bit-stamp-price \&quot;btc\&quot; \&quot;eur\&quot;)&quot;, :offset 29, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/bit-stamp-price \&quot;btc\&quot; \&quot;eur\&quot;)&quot;, :offset 1, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/bit-stamp-price \&quot;btc\&quot; \&quot;usd\&quot;)&quot;, :offset 31, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/cex-io-price \&quot;btc\&quot; \&quot;usd\&quot;)&quot;, :offset 18, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/cex_io-populate-all-pairs)&quot;, :offset 31, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/cex_io-populate-all-pairs false)&quot;, :offset 36, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/bit_pheonix-populate-all-pairs false)&quot;, :offset 42, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/bit_stamp-populate-all-pairs false)&quot;, :offset 40, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get 0 (str/split (:name {{:name \&quot;LTC/USD\&quot;}}) #\&quot;/\&quot;))&quot;, :offset 49, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get 0 (str/split (:name {:name \&quot;LTC/USD\&quot;}) #\&quot;/\&quot;))&quot;, :offset 42, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (get 0 (str/split (:name {:name \&quot;LTC/USD\&quot;}) #\&quot;/\&quot;)))&quot;, :offset 60, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(str/split (:name {:name \&quot;LTC/USD\&quot;}) #\&quot;/\&quot;)&quot;, :offset 42, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def array (str/split (:name {:name \&quot;LTC/USD\&quot;}) #\&quot;/\&quot;))&quot;, :offset 53, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(array)&quot;, :offset 6, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;array&quot;, :offset 5, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get 0 array)&quot;, :offset 12, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get array 0)&quot;, :offset 12, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/bit_stamp-populate-all-pairs true)&quot;, :offset 38, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(require '[cryptoarbitrage.core :as c])&quot;, :offset 39, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def server c/init-server)&quot;, :offset 25, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(c/stop-server server)&quot;, :offset 21, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def server (c/init-server))&quot;, :offset 13, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case a) (str/upper-case b)] ))&quot;, :offset 112, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case a) (str/upper-case b)]))&quot;, :offset 11, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case \&quot;BTC\&quot;) (str/upper-case \&quot;USD\&quot;)]))&quot;, :offset 114, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println cryptoarbitrage.cryptoapis/bit-fenix-price \&quot;btc\&quot; \&quot;eur\&quot;)&quot;, :offset 62, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get (json/read-json (:body (client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case \&quot;BTC\&quot;) (str/upper-case \&quot;USD\&quot;)])))) 7)&quot;, :offset 151, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(:body(client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case \&quot;BTC\&quot;) (str/upper-case \&quot;USD\&quot;)])))&quot;, :offset 6, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(json/read-json (:body (client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case \&quot;BTC\&quot;) (str/upper-case \&quot;USD\&quot;)]))))&quot;, :offset 15, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get (json/read-json (:body (client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case \&quot;BTC\&quot;) (str/upper-case \&quot;USD\&quot;)])))) 0)&quot;, :offset 151, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get (get (json/read-json (:body (client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case \&quot;BTC\&quot;) (str/upper-case \&quot;USD\&quot;)])))) 0) 7)&quot;, :offset 159, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/bit-fenix-price \&quot;btc\&quot; \&quot;usd\&quot;)&quot;, :offset 54, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot;)&quot;, :offset 144, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:Authorization \&quot;application/json.karateDoSecurity\&quot;})&quot;, :offset 196, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:authentication \&quot;application/json.karateDoSecurity\&quot;})&quot;, :offset 162, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;} })&quot;, :offset 173, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(:body (client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;}}))&quot;, :offset 7, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(json/read-json(:body (client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;}})))&quot;, :offset 15, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(:message(json/read-json (:body (client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;}}))))&quot;, :offset 9, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(str/split (json/read-json (:body (client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;}}))) #\&quot; \&quot;)&quot;, :offset 250, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(str/split (:message (json/read-json (:body (client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;}})))) #\&quot; \&quot;)&quot;, :offset 21, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get (str/split (:message (json/read-json (:body (client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;}})))) #\&quot; \&quot;) 0)&quot;, :offset 0, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/get-price \&quot;btc\&quot; \&quot;usd\&quot; \&quot;BST\&quot;)&quot;, :offset 54, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/get-price \&quot;btc\&quot; \&quot;usd\&quot; \&quot;BFX\&quot;)&quot;, :offset 54, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(defn descending_price\n  [a b]\n  (let [exchanges (doto(mongo/find-all \&quot;exchanges\&quot;))\n        array (list)]\n    (do\n      (loop [x 0]\n       (when (&lt; x (count exchanges))\n         (conj array (:price (get-price a b (:_id (get exchanges x))) :exchange (:_id (get exchanges x))))\n         (println array)\n         (recur (+ x 1))\n         )\n       )\n      (sort-by :price array))\n    )\n  )&quot;, :offset 385, :ns &quot;cryptoarbitrage.cryptoapis&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/get-price \&quot;btc\&quot; \&quot;usd\&quot; \&quot;CEX\&quot;)&quot;, :offset 56, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/get-price \&quot;btc\&quot; \&quot;usd\&quot; (:_id {:_id \&quot;CEX\&quot;}))&quot;, :offset 66, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def map {:_id CEX, :name CEX.IO, :website https://cex.io/} {:_id BST, :name BitStamp, :website https://www.bitstamp.net/} {:_id BFX, :name BitFinex, :website https://www.bitfinex.com/})&quot;, :offset 185, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;111&quot;, :offset 3} {:command &quot;(println (cons 3 (list 1 2)))&quot;, :offset 29, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (last (list 1 2) 3))&quot;, :offset 14, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (cons (list 1 2) 3))&quot;, :offset 14, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (conj (list 1 2) 3))&quot;, :offset 14, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def listica(list))&quot;, :offset 14, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(conj listica 2.2)&quot;, :offset 17, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(conj listica 2.4)&quot;, :offset 17, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(atom [listica] )&quot;, :offset 16, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(conj listica 123\n      )&quot;, :offset 24, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(conj listica 123)&quot;, :offset 17, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println listica)&quot;, :offset 16, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(defn atom-ex\n  \&quot;dodaje watchera koji prati menjanje\n   promenljive atomEx i svaki put kad se\n   to desi ispisuje prethodnu i trenutnu\n   vrednost\&quot;\n  [x]\n\n  (def atomEx (atom x))\n\n  (add-watch atomEx :watcher\n             (fn [key atom old-state new-state]\n               (println \&quot;atomEx change from \&quot; old-state \&quot; to \&quot; new-state)))\n\n  (println \&quot;1st x\&quot; @atomEx)\n  (reset! atomEx 10)\n  (println \&quot;2nd x\&quot; @atomEx)\n  (swap! atomEx inc)\n  (println \&quot;Increment x\&quot; @atomEx)\n  )&quot;, :offset 469, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(def atomEx (atom x))&quot;, :offset 21, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(add-watch atomEx :watcher\n             (fn [key atom old-state new-state]\n               (println \&quot;atomEx change from \&quot; old-state \&quot; to \&quot; new-state)))&quot;, :offset 150, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(def tickets-sold (agent 0))&quot;, :offset 28, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(def atomEx (atom 1))&quot;, :offset 21, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (- 5 3 2))&quot;, :offset 19, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(println (mod 12 5))&quot;, :offset 20, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(str \&quot;Hello \&quot; name)&quot;, :offset 19, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;[&amp; names]&quot;, :offset 9, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(println (dec 5))&quot;, :offset 17, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(conj listica 2.3)&quot;, :offset 17, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(do (println \&quot;drive\&quot;)\n        (println \&quot;vote\&quot;))&quot;, :offset 47, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(println \&quot;2nd\&quot;)&quot;, :offset 15, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(println (+ 1 2 3))&quot;, :offset 19, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/descending_price \&quot;btc\&quot; \&quot;usd\&quot;)&quot;, :offset 49, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def y (list 1 2 3))&quot;, :offset 20, :ns &quot;cryptoarbitrage.cryptoapis&quot;} {:command &quot;(defn print-list\n  [&amp; nums]\n  (doseq [x nums]\n    (println x)\n    )\n  )&quot;, :offset 71, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(doseq [x 5]\n  (println x)\n  )&quot;, :offset 11, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (cryptoarbitrage.cryptoapis/ascending_price \&quot;btc\&quot; \&quot;eur\&quot;))&quot;, :offset 38, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (cryptoarbitrage.cryptoapis/ascending_price \&quot;btc\&quot; \&quot;usd\&quot;))&quot;, :offset 63, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (cryptoarbitrage.cryptoapis/descending_price \&quot;btc\&quot; \&quot;eur\&quot;))&quot;, :offset 64, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def a (dge 2 3 [1 2 3 4 5 6]))&quot;, :offset 31, :ns &quot;cryptoarbitrage.cryptoapis&quot;} {:command &quot;(cex-io-price a b)&quot;, :offset 18, :ns &quot;cryptoarbitrage.cryptoapis&quot;} {:command &quot;(def a 1 2 3 4)&quot;, :offset 15, :ns &quot;cryptoarbitrage.cryptoapis&quot;} {:command &quot;(def a (1 2 3 4))&quot;, :offset 17, :ns &quot;cryptoarbitrage.cryptoapis&quot;} {:command &quot;(def a (matrix-native/dge 2 3 [1 2 3 4 5 6]))&quot;, :offset 45, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/matrica)&quot;, :offset 36, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def server (cryptoarbitrage.core/init-server))&quot;, :offset 13, :ns &quot;cryptoarbitrage.core&quot;}], :remote [{:command &quot;(require '[cryptoarbitrage.core :as c])&quot;, :offset 39, :ns &quot;user&quot;} {:command &quot;(c/-main 123)&quot;, :offset 13, :ns &quot;user&quot;} {:command &quot;(def x \&quot;vostecar\&quot;)&quot;, :offset 18, :ns &quot;user&quot;} {:command &quot;(c/-main x)&quot;, :offset 11, :ns &quot;user&quot;}]}}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\upins\Documents\IdeaProjects\CryptoArbitrageClojure\cryptoarbitrage\resources\public\profilepictures" />
+      <recent name="C:\Users\upins\Documents\IdeaProjects\CryptoArbitrageClojure\cryptoarbitrage\resources\public" />
+      <recent name="C:\Users\upins\Documents\IdeaProjects\CryptoArbitrageClojure\cryptoarbitrage\resources" />
+    </key>
+  </component>
+  <component name="ReplState" timestamp="1534616525246">{:repl-history {:ide [], :local [{:command &quot;(c/stop-server server\n               )&quot;, :offset 37, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(c/stop-server server\n               \n               )&quot;, :offset 53, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(apply dissoc {:_id id :user username})&quot;, :offset 39, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(apply dissoc {:_id \&quot;id\&quot; :user \&quot;username\&quot;})&quot;, :offset 43, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(apply dissoc {:_id \&quot;id\&quot; :user \&quot;username\&quot;} [:bla])&quot;, :offset 50, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(apply dissoc {:_id \&quot;id\&quot; :user \&quot;username\&quot;} [:_id])&quot;, :offset 48, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(dissoc {:_id \&quot;id\&quot; :user \&quot;username\&quot;} [:_id])&quot;, :offset 1, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(require '[cryptoarbitrage.mongodb :as mongo])&quot;, :offset 46, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(mongo/drop \&quot;countries\&quot;)&quot;, :offset 22, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(require '[cryptoarbitrage.core :as c])\n(def server (c/init-server))&quot;, :offset 68, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(require '[cryptoarbitrage.cryptoapis :as api])&quot;, :offset 47, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/cex-io-price \&quot;btc\&quot; \&quot;eur\&quot;)&quot;, :offset 30, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println api/cex-io-price \&quot;btc\&quot; \&quot;eur\&quot;)&quot;, :offset 38, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println api/bit-stamp-price \&quot;btc\&quot; \&quot;eur\&quot;)&quot;, :offset 29, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/bit-stamp-price \&quot;btc\&quot; \&quot;eur\&quot;)&quot;, :offset 1, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/bit-stamp-price \&quot;btc\&quot; \&quot;usd\&quot;)&quot;, :offset 31, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/cex-io-price \&quot;btc\&quot; \&quot;usd\&quot;)&quot;, :offset 18, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/cex_io-populate-all-pairs)&quot;, :offset 31, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/cex_io-populate-all-pairs false)&quot;, :offset 36, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/bit_pheonix-populate-all-pairs false)&quot;, :offset 42, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/bit_stamp-populate-all-pairs false)&quot;, :offset 40, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get 0 (str/split (:name {{:name \&quot;LTC/USD\&quot;}}) #\&quot;/\&quot;))&quot;, :offset 49, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get 0 (str/split (:name {:name \&quot;LTC/USD\&quot;}) #\&quot;/\&quot;))&quot;, :offset 42, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (get 0 (str/split (:name {:name \&quot;LTC/USD\&quot;}) #\&quot;/\&quot;)))&quot;, :offset 60, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(str/split (:name {:name \&quot;LTC/USD\&quot;}) #\&quot;/\&quot;)&quot;, :offset 42, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def array (str/split (:name {:name \&quot;LTC/USD\&quot;}) #\&quot;/\&quot;))&quot;, :offset 53, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(array)&quot;, :offset 6, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;array&quot;, :offset 5, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get 0 array)&quot;, :offset 12, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get array 0)&quot;, :offset 12, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(api/bit_stamp-populate-all-pairs true)&quot;, :offset 38, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(require '[cryptoarbitrage.core :as c])&quot;, :offset 39, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def server c/init-server)&quot;, :offset 25, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(c/stop-server server)&quot;, :offset 21, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def server (c/init-server))&quot;, :offset 13, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case a) (str/upper-case b)] ))&quot;, :offset 112, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case a) (str/upper-case b)]))&quot;, :offset 11, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case \&quot;BTC\&quot;) (str/upper-case \&quot;USD\&quot;)]))&quot;, :offset 114, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println cryptoarbitrage.cryptoapis/bit-fenix-price \&quot;btc\&quot; \&quot;eur\&quot;)&quot;, :offset 62, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get (json/read-json (:body (client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case \&quot;BTC\&quot;) (str/upper-case \&quot;USD\&quot;)])))) 7)&quot;, :offset 151, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(:body(client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case \&quot;BTC\&quot;) (str/upper-case \&quot;USD\&quot;)])))&quot;, :offset 6, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(json/read-json (:body (client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case \&quot;BTC\&quot;) (str/upper-case \&quot;USD\&quot;)]))))&quot;, :offset 15, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get (json/read-json (:body (client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case \&quot;BTC\&quot;) (str/upper-case \&quot;USD\&quot;)])))) 0)&quot;, :offset 151, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get (get (json/read-json (:body (client/get (str/join [\&quot;https://api.bitfinex.com/v2/tickers?symbols=t\&quot; (str/upper-case \&quot;BTC\&quot;) (str/upper-case \&quot;USD\&quot;)])))) 0) 7)&quot;, :offset 159, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/bit-fenix-price \&quot;btc\&quot; \&quot;usd\&quot;)&quot;, :offset 54, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot;)&quot;, :offset 144, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:Authorization \&quot;application/json.karateDoSecurity\&quot;})&quot;, :offset 196, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:authentication \&quot;application/json.karateDoSecurity\&quot;})&quot;, :offset 162, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;} })&quot;, :offset 173, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(:body (client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;}}))&quot;, :offset 7, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(json/read-json(:body (client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;}})))&quot;, :offset 15, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(:message(json/read-json (:body (client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;}}))))&quot;, :offset 9, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(str/split (json/read-json (:body (client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;}}))) #\&quot; \&quot;)&quot;, :offset 250, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(str/split (:message (json/read-json (:body (client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;}})))) #\&quot; \&quot;)&quot;, :offset 21, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(get (str/split (:message (json/read-json (:body (client/get \&quot;https://asia.playkaratedo.com/KarateDORest/webapi/myresource?params=GETAI;ai;g18165969481827287950;purple;boss_purple;boss_purple;0\&quot; {:headers {:Authorization \&quot;application/json.karateDoSecurity\&quot;}})))) #\&quot; \&quot;) 0)&quot;, :offset 0, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/get-price \&quot;btc\&quot; \&quot;usd\&quot; \&quot;BST\&quot;)&quot;, :offset 54, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/get-price \&quot;btc\&quot; \&quot;usd\&quot; \&quot;BFX\&quot;)&quot;, :offset 54, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(defn descending_price\n  [a b]\n  (let [exchanges (doto(mongo/find-all \&quot;exchanges\&quot;))\n        array (list)]\n    (do\n      (loop [x 0]\n       (when (&lt; x (count exchanges))\n         (conj array (:price (get-price a b (:_id (get exchanges x))) :exchange (:_id (get exchanges x))))\n         (println array)\n         (recur (+ x 1))\n         )\n       )\n      (sort-by :price array))\n    )\n  )&quot;, :offset 385, :ns &quot;cryptoarbitrage.cryptoapis&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/get-price \&quot;btc\&quot; \&quot;usd\&quot; \&quot;CEX\&quot;)&quot;, :offset 56, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/get-price \&quot;btc\&quot; \&quot;usd\&quot; (:_id {:_id \&quot;CEX\&quot;}))&quot;, :offset 66, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def map {:_id CEX, :name CEX.IO, :website https://cex.io/} {:_id BST, :name BitStamp, :website https://www.bitstamp.net/} {:_id BFX, :name BitFinex, :website https://www.bitfinex.com/})&quot;, :offset 185, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;111&quot;, :offset 3} {:command &quot;(println (cons 3 (list 1 2)))&quot;, :offset 29, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (last (list 1 2) 3))&quot;, :offset 14, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (cons (list 1 2) 3))&quot;, :offset 14, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (conj (list 1 2) 3))&quot;, :offset 14, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def listica(list))&quot;, :offset 14, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(conj listica 2.2)&quot;, :offset 17, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(conj listica 2.4)&quot;, :offset 17, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(atom [listica] )&quot;, :offset 16, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(conj listica 123\n      )&quot;, :offset 24, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(conj listica 123)&quot;, :offset 17, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println listica)&quot;, :offset 16, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(defn atom-ex\n  \&quot;dodaje watchera koji prati menjanje\n   promenljive atomEx i svaki put kad se\n   to desi ispisuje prethodnu i trenutnu\n   vrednost\&quot;\n  [x]\n\n  (def atomEx (atom x))\n\n  (add-watch atomEx :watcher\n             (fn [key atom old-state new-state]\n               (println \&quot;atomEx change from \&quot; old-state \&quot; to \&quot; new-state)))\n\n  (println \&quot;1st x\&quot; @atomEx)\n  (reset! atomEx 10)\n  (println \&quot;2nd x\&quot; @atomEx)\n  (swap! atomEx inc)\n  (println \&quot;Increment x\&quot; @atomEx)\n  )&quot;, :offset 469, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(def atomEx (atom x))&quot;, :offset 21, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(add-watch atomEx :watcher\n             (fn [key atom old-state new-state]\n               (println \&quot;atomEx change from \&quot; old-state \&quot; to \&quot; new-state)))&quot;, :offset 150, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(def tickets-sold (agent 0))&quot;, :offset 28, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(def atomEx (atom 1))&quot;, :offset 21, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (- 5 3 2))&quot;, :offset 19, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(println (mod 12 5))&quot;, :offset 20, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(str \&quot;Hello \&quot; name)&quot;, :offset 19, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;[&amp; names]&quot;, :offset 9, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(println (dec 5))&quot;, :offset 17, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(conj listica 2.3)&quot;, :offset 17, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(do (println \&quot;drive\&quot;)\n        (println \&quot;vote\&quot;))&quot;, :offset 47, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(println \&quot;2nd\&quot;)&quot;, :offset 15, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(println (+ 1 2 3))&quot;, :offset 19, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/descending_price \&quot;btc\&quot; \&quot;usd\&quot;)&quot;, :offset 49, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def y (list 1 2 3))&quot;, :offset 20, :ns &quot;cryptoarbitrage.cryptoapis&quot;} {:command &quot;(defn print-list\n  [&amp; nums]\n  (doseq [x nums]\n    (println x)\n    )\n  )&quot;, :offset 71, :ns &quot;cryptoarbitrage.syntax&quot;} {:command &quot;(doseq [x 5]\n  (println x)\n  )&quot;, :offset 11, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (cryptoarbitrage.cryptoapis/ascending_price \&quot;btc\&quot; \&quot;eur\&quot;))&quot;, :offset 38, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (cryptoarbitrage.cryptoapis/ascending_price \&quot;btc\&quot; \&quot;usd\&quot;))&quot;, :offset 63, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(println (cryptoarbitrage.cryptoapis/descending_price \&quot;btc\&quot; \&quot;eur\&quot;))&quot;, :offset 64, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def a (dge 2 3 [1 2 3 4 5 6]))&quot;, :offset 31, :ns &quot;cryptoarbitrage.cryptoapis&quot;} {:command &quot;(cex-io-price a b)&quot;, :offset 18, :ns &quot;cryptoarbitrage.cryptoapis&quot;} {:command &quot;(def a 1 2 3 4)&quot;, :offset 15, :ns &quot;cryptoarbitrage.cryptoapis&quot;} {:command &quot;(def a (1 2 3 4))&quot;, :offset 17, :ns &quot;cryptoarbitrage.cryptoapis&quot;} {:command &quot;(def a (matrix-native/dge 2 3 [1 2 3 4 5 6]))&quot;, :offset 45, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(cryptoarbitrage.cryptoapis/matrica)&quot;, :offset 36, :ns &quot;cryptoarbitrage.core&quot;} {:command &quot;(def server (cryptoarbitrage.core/init-server))&quot;, :offset 13, :ns &quot;cryptoarbitrage.core&quot;}], :remote [{:command &quot;(require '[cryptoarbitrage.core :as c])&quot;, :offset 39, :ns &quot;user&quot;} {:command &quot;(c/-main 123)&quot;, :offset 13, :ns &quot;user&quot;} {:command &quot;(def x \&quot;vostecar\&quot;)&quot;, :offset 18, :ns &quot;user&quot;} {:command &quot;(c/-main x)&quot;, :offset 11, :ns &quot;user&quot;}]}}</component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -357,20 +371,20 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.15686275" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="right" id="REPL" order="3" side_tool="true" visible="true" weight="0.271855" />
+      <window_info anchor="right" id="REPL" order="3" side_tool="true" visible="true" weight="0.27132195" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="right" id="Leiningen" order="3" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49612403" visible="true" weight="0.10341151" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49095607" visible="true" weight="0.1076759" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="2" sideWeight="0.503876" side_tool="true" visible="true" weight="0.10341151" />
+      <window_info id="Favorites" order="2" sideWeight="0.50904393" side_tool="true" visible="true" weight="0.1076759" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="REST Client" order="8" sideWeight="0.49789253" visible="true" weight="0.32934782" />
@@ -642,13 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/mongodb.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/uncomplicate/neanderthal/0.20.4/neanderthal-0.20.4.jar!/uncomplicate/neanderthal/core.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -677,10 +684,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/syntax.clj">
+    <entry file="file://$PROJECT_DIR$/project.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="12" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="12" />
+        <state>
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/handler_helper.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -691,40 +705,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/handler_helper.clj">
+    <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/core.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+        <state relative-caret-position="442">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/core.clj">
+    <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/mongodb.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        <state relative-caret-position="17">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/syntax.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="50" column="10" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cryptoarbitrage/handler.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="129" column="86" lean-forward="true" selection-start-line="129" selection-start-column="86" selection-end-line="129" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="274">
+          <caret line="120" column="81" selection-start-line="120" selection-start-column="81" selection-end-line="120" selection-end-column="81" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>IDE SDK</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>cryptoarbitrage</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>IDE SDK</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Leiningen: clj-http:3.9.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
