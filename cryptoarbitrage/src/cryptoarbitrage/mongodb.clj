@@ -29,6 +29,9 @@
   (mc/find-one-as-map db collection query)
   )
 
+(defn find-all-with-query [collection query]
+  (mc/find-maps db collection query)
+  )
 
 (defn find-all
   [collection & query]

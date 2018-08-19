@@ -6,6 +6,15 @@
             [clj-http.client :as client]
             [clojure.java.io :as io]
             [cryptoarbitrage.cryptoapis :as apis]
+            [clj-time.format :as f]
+            [clj-time.core :as t]
+            [clj-time.local :as l]
+            [clj-time.coerce :as c]
+
+            [monger.core :as mg]
+            [monger.collection :as mc]
+            [monger.credentials :as mcr]
+            [clojure.data.json :as json]
             ))
 
 (defn login [req]
@@ -151,6 +160,106 @@
        )
      (helper/form-fail {:message "Wrong password"})
      ))
+  )
+
+(defn save_blog_post [id req]
+  (let [json_body (doto (helper/read-body req))
+        title (doto (:title json_body))
+        description (doto (:description json_body))
+        text (doto (:text json_body))
+        ]
+    (if (or (str/blank? title) (str/blank? description) (str/blank? text))
+      (helper/form-fail {:message "Title, description and text can't be empty"})
+      (let [user (mongo/find "users" {:_id id})]
+        (if (nil? user)
+          (helper/form-fail {:message "User is not found"})
+          (do (mongo/insert "blog_posts" (-> json_body
+                                          (assoc :user_id id)
+                                          (assoc :user user)
+                                             (assoc :thumbs 0)
+                                          (assoc :_id (count (mongo/find-all "blog_posts")))
+                                             (assoc :thumbs_by (list))
+                                          (assoc :date (.format (java.text.SimpleDateFormat. "dd/MM/yyyy HH:mm:ss") (new java.util.Date)))
+                                          )
+                         )
+              (helper/form-success {:message "Blog post successfully posted"})
+              )
+          )
+        )
+      )
+    )
+  )
+
+(defn blog_post_thumbs_up [id req]
+  (let [json_body (doto (helper/read-body req))
+        rating_user_id (doto (:id json_body))
+        ]
+    (if (or (str/blank? rating_user_id))
+      (helper/form-fail {:message "User id that is rating can't be empty"})
+      (let [post (mongo/find "blog_posts" {:_id (Integer/parseInt id)})]
+        (if (nil? post)
+          (helper/form-fail {:message "That post is not found"})
+          (if (nil? (mongo/find "users" {:_id rating_user_id}))
+            (helper/form-fail {:message "That user doesn't exist"})
+            (if (.contains (:thumbs_by post) rating_user_id)
+             (helper/form-fail {:message "You have already rated this post"})
+             (do
+               (mongo/update "blog_posts" {:_id (Integer/parseInt id)}
+                               (-> post
+                                   (assoc :thumbs (+ 1 (:thumbs post)))
+                                   (assoc :thumbs_by (conj (:thumbs_by post) rating_user_id) )))
+                 (helper/form-success {:message "Thank you for rating"})
+                 )
+             )
+            )
+
+          )
+        )
+      )
+    )
+  )
+(defn blog_post_thumbs_down [id req]
+  (let [json_body (doto (helper/read-body req))
+        rating_user_id (doto (:id json_body))
+        ]
+    (if (or (str/blank? rating_user_id))
+      (helper/form-fail {:message "User id that is rating can't be empty"})
+      (let [post (mongo/find "blog_posts" {:_id (Integer/parseInt id)})]
+        (if (nil? post)
+          (helper/form-fail {:message "That post is not found"})
+          (if (nil? (mongo/find "users" {:_id rating_user_id}))
+            (helper/form-fail {:message "That user doesn't exist"})
+            (if (.contains (:thumbs_by post) rating_user_id)
+              (helper/form-fail {:message "You have already rated this post"})
+              (do
+                (mongo/update "blog_posts" {:_id (Integer/parseInt id)}
+                              (-> post
+                                  (assoc :thumbs (- 1 (:thumbs post)))
+                                  (assoc :thumbs_by (conj (:thumbs_by post) rating_user_id) )))
+                (helper/form-success {:message "Thank you for rating"})
+                )
+              )
+            )
+
+          )
+        )
+      )
+    )
+  )
+
+
+
+
+(defn get_blog_posts []
+  (helper/form-success (mongo/find-all "blog_posts"))
+  )
+
+(defn get_blog_posts_sorted []
+  (helper/form-success (reverse (sort-by :thumbs (mongo/find-all "blog_posts"))))
+  )
+
+(defn get_my_blog_posts [id]
+  (helper/form-success(mongo/find-all-with-query "blog_posts" {:user_id id}))
   )
 
 (defn populate_exchanges [req]

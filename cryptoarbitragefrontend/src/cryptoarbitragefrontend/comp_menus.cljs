@@ -2,7 +2,7 @@
   (:require [reagent.core :as reagent]
             [cryptoarbitragefrontend.comp_general :as comp_general]
             [cryptoarbitragefrontend.comp_profile :as comp_profile]
-            ))
+            [cryptoarbitragefrontend.comp_blog :as comp_blog]))
 
 (defonce is_admin (reagent/atom false))
 (defonce left-menu-list (reagent/atom nil))
@@ -16,11 +16,10 @@
   )
 
 (defn client_menu_left []
-
-  (list [:li.mr-2 {:key 1} [:a {:on-click #(comp_profile/my-profile)
+  (list [:li.mr-2 {:key 1} [:a {:on-click #(comp_profile/open_profile @comp_general/user true)
              :href     "#/me"} "Profile"]]
-    [:li.mr-2 {:key 2} [:a {:on-click #(comp_general/blog)
-              :href     "#/blog"} "Blog"]])
+    [:li.mr-2 {:key 2} [:a {:on-click #(comp_blog/fill-posts)
+                            :href     "#/blog"} "Blog"]])
   )
 (defn client_menu_right
   []

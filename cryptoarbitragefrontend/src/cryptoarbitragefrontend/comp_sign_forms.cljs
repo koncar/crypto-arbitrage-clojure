@@ -108,6 +108,7 @@
   (reset! comp_general/user_logged true)
   (comp_messages/success-message-from-response body)
   (comp_menus/populate-menu (:admin body))
+  (println @comp_general/user)
   (secretary/dispatch! "/home")
   )
 

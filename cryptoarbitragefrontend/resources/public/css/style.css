@@ -418,3 +418,11 @@ width :100%;
 a:active {
 background-color:#0e7763 !important;
 }
+.glyphicon-thumbs-up{
+
+background: url("/img/glyphs/glyphicons-344-thumbs-up.png") no-repeat top left;
+background-size:20px;
+height:20px;
+width:20px;
+
+}

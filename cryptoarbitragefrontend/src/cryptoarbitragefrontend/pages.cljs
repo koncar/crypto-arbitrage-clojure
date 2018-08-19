@@ -4,7 +4,8 @@
             [cryptoarbitragefrontend.comp_menus :as comp_menus]
             [cryptoarbitragefrontend.comp_sign_forms :as comp_forms]
             [reagent.core :as reagent]
-            [cryptoarbitragefrontend.comp_profile :as comp_profile])
+            [cryptoarbitragefrontend.comp_profile :as comp_profile]
+            [cryptoarbitragefrontend.comp_blog :as comp_blog])
   )
 
 (defonce form (reagent/atom (comp_forms/sign-up-form)))
@@ -51,7 +52,7 @@
   [:div
    (comp_menus/home-navigation)
    (comp_messages/messages-holder)
-   (comp_pages/blog)
+   (comp_blog/posts-holder)
    ]
   )
 

@@ -14,7 +14,6 @@
 
 (defonce user (reagent/atom nil))
 (defonce user_logged (reagent/atom false))
-
 (defn is_user_logged [] @user_logged)
 
 (defn home-panel []
@@ -28,11 +27,8 @@
 
 (defn crypto-arbitrage-table [] nil)
 
-(defn blog [] nil)
 
 (defn write-blog [] nil)
-
-
 
 (defn populate-countries []
   (client/post-resource "http://localhost:8080/populate-countries" {:password "admin"} comp_messages/success-message-from-response comp_messages/fail-message-from-response)

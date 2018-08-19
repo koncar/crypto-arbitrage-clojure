@@ -3,13 +3,11 @@
                     [secretary.core :refer [defroute]])
    (:import goog.history.Html5History)
   (:require
-    [cljs-http.client :as client]
     [reagent.core :as reagent]
     [secretary.core :as secretary]
     [goog.events :as events]
     [goog.history.EventType :as EventType]
     [cryptoarbitragefrontend.pages :as pages]
-    [cryptoarbitragefrontend.http-client :as cli]
     [re-com.box :as box]
     [cryptoarbitragefrontend.comp_general :as comp_general]))
 
