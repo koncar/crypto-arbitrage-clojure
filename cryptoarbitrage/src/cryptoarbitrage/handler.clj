@@ -313,19 +313,19 @@
     (if (and (not(str/blank? email)) (not(str/blank? subject)) (not (str/blank? name)) (not (str/blank? message)))
       (do
            (email/send-message {:host "smtp.1and1.com"
-                          :port 587
-                                :auth true
-                          :user "test@miracledojo.com"
-                          :pass "Thisistestemail.123"}
-                         {:from "test@miracledojo.com"
-                          :to "skoncar@live.com"
-                          :subject subject
-                          :body [:alternative
-                                 {:type "text/plain"
-                                  :content "This is a test."}
-                                 {:type "text/html"
-                                  :content message}
-                                 ]})
+                                :port 587
+                                      :auth true
+                                :user "test@miracledojo.com"
+                                :pass "Thisistestemail.123"}
+                               {:from "test@miracledojo.com"
+                                :to "skoncar@live.com"      ;;SAMO OVO SME DA SE PROMENI AKO SE SALJE NA DRUGI MEJL
+                                :subject subject
+                                :body [:alternative
+                                       {:type "text/plain"
+                                        :content "This is a test."}
+                                       {:type "text/html"
+                                        :content message}
+                                       ]})
         (helper/form-success {:message "Email successfully sent"})
         )
       (helper/form-fail {:message "Email, subject, name and message cannot be empty"})
