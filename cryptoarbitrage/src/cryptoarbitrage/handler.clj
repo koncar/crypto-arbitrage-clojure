@@ -167,6 +167,7 @@
         title (doto (:title json_body))
         description (doto (:description json_body))
         text (doto (:text json_body))
+        text_fixed (doto (str/replace text "<!--block-->" ""))
         ]
     (if (or (str/blank? title) (str/blank? description) (str/blank? text))
       (helper/form-fail {:message "Title, description and text can't be empty"})
@@ -177,7 +178,8 @@
                                           (assoc :user_id id)
                                           (assoc :user user)
                                              (assoc :thumbs 0)
-                                          (assoc :_id (count (mongo/find-all "blog_posts")))
+                                             (assoc :text text_fixed)
+                                          (assoc :_id (+ 1 (:_id (last (mongo/find-all "blog_posts")))))
                                              (assoc :thumbs_by (list))
                                           (assoc :date (.format (java.text.SimpleDateFormat. "dd/MM/yyyy HH:mm:ss") (new java.util.Date)))
                                           )
@@ -202,7 +204,15 @@
           (if (nil? (mongo/find "users" {:_id rating_user_id}))
             (helper/form-fail {:message "That user doesn't exist"})
             (if (.contains (:thumbs_by post) rating_user_id)
-             (helper/form-fail {:message "You have already rated this post"})
+             ;(helper/form-fail {:message "You have already rated this post"})
+             (do
+               (mongo/update "blog_posts" {:_id (Integer/parseInt id)}
+                             (-> post
+                                 (assoc :thumbs (+ 1 (:thumbs post)))
+                                 (assoc :thumbs_by (conj (:thumbs_by post) rating_user_id) )))
+               (helper/form-success {:message "Thank you for rating"})
+               )
+
              (do
                (mongo/update "blog_posts" {:_id (Integer/parseInt id)}
                                (-> post
@@ -230,7 +240,14 @@
           (if (nil? (mongo/find "users" {:_id rating_user_id}))
             (helper/form-fail {:message "That user doesn't exist"})
             (if (.contains (:thumbs_by post) rating_user_id)
-              (helper/form-fail {:message "You have already rated this post"})
+              ;(helper/form-fail {:message "You have already rated this post"})
+              (do
+                (mongo/update "blog_posts" {:_id (Integer/parseInt id)}
+                              (-> post
+                                  (assoc :thumbs (- 1 (:thumbs post)))
+                                  (assoc :thumbs_by (conj (:thumbs_by post) rating_user_id) )))
+                (helper/form-success {:message "Thank you for rating"})
+                )
               (do
                 (mongo/update "blog_posts" {:_id (Integer/parseInt id)}
                               (-> post
@@ -251,7 +268,8 @@
 
 
 (defn get_blog_posts []
-  (helper/form-success (mongo/find-all "blog_posts"))
+  (helper/form-success (reverse (mongo/find-all "blog_posts")))
+
   )
 
 (defn get_blog_posts_sorted []

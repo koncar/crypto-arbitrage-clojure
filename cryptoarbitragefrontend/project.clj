@@ -17,6 +17,8 @@
                  [re-com "2.1.0"]
                  [figwheel-sidecar "0.5.5"]
                  [cljs-http "0.1.39"]
+                 [hickory "0.7.1"]
+
                  ]
 
   :plugins [;;[lein-figwheel "0.5.16"]

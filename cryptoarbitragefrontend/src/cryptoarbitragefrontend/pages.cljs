@@ -5,7 +5,9 @@
             [cryptoarbitragefrontend.comp_sign_forms :as comp_forms]
             [reagent.core :as reagent]
             [cryptoarbitragefrontend.comp_profile :as comp_profile]
-            [cryptoarbitragefrontend.comp_blog :as comp_blog])
+            [cryptoarbitragefrontend.comp_blog :as comp_blog]
+            [cryptoarbitragefrontend.comp-write-post :as comp_blog_write]
+            )
   )
 
 (defonce form (reagent/atom (comp_forms/sign-up-form)))
@@ -38,6 +40,7 @@
     ]
     ;[:button {:on-click #(components/add_success_with_timeout "Ovo je test poruka")} "Test"]
     ]
+   (comp_pages/footer)
    ]
   )
 
@@ -46,6 +49,8 @@
    (comp_menus/home-navigation)
    (comp_messages/messages-holder)
    (comp_pages/crypto-arbitrage-table)
+   (comp_pages/footer)
+
    ])
 
 (defn blog []
@@ -53,6 +58,17 @@
    (comp_menus/home-navigation)
    (comp_messages/messages-holder)
    (comp_blog/posts-holder)
+   (comp_pages/footer)
+
+   ]
+  )
+
+(defn post []
+  [:div
+   (comp_menus/home-navigation)
+   (comp_messages/messages-holder)
+   (comp_blog/opened-post)
+   (comp_pages/footer)
    ]
   )
 
@@ -60,7 +76,8 @@
   [:div
    (comp_menus/home-navigation)
    (comp_messages/messages-holder)
-   (comp_pages/write-blog)
+   (comp_blog_write/write-blog)
+   (comp_pages/footer)
    ]
   )
 
@@ -69,6 +86,8 @@
    (comp_menus/home-navigation)
    (comp_messages/messages-holder)
    (comp_profile/my-profile)
+   (comp_pages/footer)
+
    ])
 
 (defn not-found []

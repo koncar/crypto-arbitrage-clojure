@@ -4,10 +4,8 @@
             [re-com.dropdown :refer [filter-choices-by-keyword single-dropdown-args-desc]]
             [re-com.util :refer [item-for-id remove-id-item insert-nth]]
             [reagent.core :as reagent]
-            [secretary.core :as secretary]
             [cryptoarbitragefrontend.comp_alert-messages :as comp_messages]
-            [cryptoarbitragefrontend.util :as util]
-            [cryptoarbitragefrontend.comp_countries :as comp_countries])
+)
 
   )
 
@@ -24,11 +22,48 @@
     [:hr.star-light]
     [:h2.font-weight-light.mb-0 "crypto arbitrage calculator collects data from famous crypto exchanges and calculates circles you can use to make profit"]
     ]])
+(defn footer []
+
+  [:footer.footer.text-center.sticky-bottom
+   {:style {:margin-top "100px"}
+    }
+   [:div.container
+    [:div.row
+     [:div.col-md-4.mb-5.mb-lg-0
+      [:h4.text-uppercase.mb-4 "DEVELOPMENT"]
+      [:p.lead.mb-0
+       "Crypto-Arbitrager has front-end developed as single page application using ClojureScript and Reagent engine. Back-end is developed as REST service with Clojure and uses MongoDB as database."]]
+     [:div.col-md-4.mb-5.mb-lg-0
+      [:h4.text-uppercase.mb-4 "Author"]
+      [:ul.list-inline.mb-0
+       ;[:li.list-inline-item
+       ; [:a.btn.btn-outline-light.btn-social.text-center.rounded-circle
+       ;  {:href "#"}
+       ;  [:i.fa.fa-fw.fa-facebook]]]
+       ;[:li.list-inline-item
+       ; [:a.btn.btn-outline-light.btn-social.text-center.rounded-circle
+       ;  {:href "#"}
+       ;  [:i.fa.fa-fw.fa-google-plus]]]
+       ;[:li.list-inline-item
+       ; [:a.btn.btn-outline-light.btn-social.text-center.rounded-circle
+       ;  {:href "#"}
+       ;  [:i.fa.fa-fw.fa-twitter]]]
+       [:li.list-inline-item
+        [:a.btn.btn-outline-light.btn-social.text-center.rounded-circle
+         {:href "https://www.linkedin.com/in/stevan-koncar-a628508b/"}
+         [:i.fa.fa-fw.fa-linkedin]]]
+       [:li.list-inline-item
+        [:a.btn.btn-outline-light.btn-social.text-center.rounded-circle
+         {:href "mailto:skoncar@live.com"}
+         [:i.fa.fa-fw.fa-envelope]]]
+       ]]
+     [:div.col-md-4
+      [:h4.text-uppercase.mb-4 "About Crypto-Arbitrager"]
+      [:p.lead.mb-0
+       "crypto arbitrage calculator collects data from famous crypto exchanges and calculates circles you can use to make profit"]]]]]
+  )
 
 (defn crypto-arbitrage-table [] nil)
-
-
-(defn write-blog [] nil)
 
 (defn populate-countries []
   (client/post-resource "http://localhost:8080/populate-countries" {:password "admin"} comp_messages/success-message-from-response comp_messages/fail-message-from-response)

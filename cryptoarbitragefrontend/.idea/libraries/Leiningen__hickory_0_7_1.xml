@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: hickory:0.7.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/hickory/hickory/0.7.1/hickory-0.7.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

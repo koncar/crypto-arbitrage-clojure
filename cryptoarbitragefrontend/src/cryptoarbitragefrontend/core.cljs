@@ -39,6 +39,12 @@
   (defroute "/blog" []
             (swap! page-state assoc :page :blog))
 
+  (defroute "/write-blog" []
+            (swap! page-state assoc :page :write-blog))
+
+  (defroute "/post/:id" [id]
+            (swap! page-state assoc :page :post))
+
   (hook-browser-navigation!))
 
 (defmethod current-page :home []
@@ -66,6 +72,19 @@
 (defmethod current-page :blog []
   (if (comp_general/is_user_logged)
     [pages/blog]
+    [pages/home]
+    )
+  )
+
+(defmethod current-page :write-blog []
+  (if (comp_general/is_user_logged)
+    [pages/write-blog]
+    [pages/home]
+    )
+  )
+(defmethod current-page :post []
+  (if (comp_general/is_user_logged)
+    [pages/post]
     [pages/home]
     )
   )

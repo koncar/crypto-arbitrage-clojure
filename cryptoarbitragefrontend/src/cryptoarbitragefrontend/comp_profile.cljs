@@ -1,13 +1,11 @@
 (ns cryptoarbitragefrontend.comp_profile
   (:require [cryptoarbitragefrontend.comp_countries :as comp_countries]
             [reagent.core :as reagent]
-            [cryptoarbitragefrontend.comp_general :as comp_general]
             [clojure.string :as str]
             [cryptoarbitragefrontend.comp_alert-messages :as comp_messages]
             [cryptoarbitragefrontend.http-client :as client]
             [re-com.util :refer [item-for-id remove-id-item insert-nth]]
-            [cryptoarbitragefrontend.util :as util]
-            [cljs-http.client :as client-lib]))
+            ))
 
 
 (defonce not_editing (reagent/atom true))

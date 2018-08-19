@@ -2,7 +2,9 @@
   (:require [reagent.core :as reagent]
             [cryptoarbitragefrontend.comp_general :as comp_general]
             [cryptoarbitragefrontend.comp_profile :as comp_profile]
-            [cryptoarbitragefrontend.comp_blog :as comp_blog]))
+            [cryptoarbitragefrontend.comp_blog :as comp_blog]
+            [cryptoarbitragefrontend.comp-write-post :as comp_write_blog]
+            ))
 
 (defonce is_admin (reagent/atom false))
 (defonce left-menu-list (reagent/atom nil))
@@ -23,21 +25,27 @@
   )
 (defn client_menu_right
   []
-  [:li [:a {:on-click #(sign-out)
-            :href "#/"} "SIGN OUT"]]
+  (list [:li {:key 3} [:a {:on-click #(sign-out)
+                      :href     "#/"} "SIGN OUT"]])
   )
 (defn admin_menu_left []
-  [
-   (client_menu_left)
-   ]
+  (client_menu_left)
   )
 
 (defn admin_menu_right []
-  (client_menu_right)
-  [:li [:a {:on-click #(comp_general/write-blog)
-              :href "/write-blog"} "WRITE BLOG POST"]]
-  [:li [:a {:on-close #(comp_general/populate-countries)} "POPULATE COUNTRIES"]]
-  [:li [:a {:on-close #(comp_general/populate-exchanges)} "POPULATE EXCHANGES"]]
+  (concat
+          (list [:li.mr-2 {:key 4} [:a {:on-click #(comp_write_blog/write-blog)
+                               :href     "#/write-blog"}
+                           "WRITE BLOG POST"]]
+                [:li.mr-2 {:key 5} [:a {:on-click #(comp_general/populate-countries)
+                               :href "#/"}
+                           "reset countries"]]
+                [:li.mr-2 {:key 6} [:a {:on-click #(comp_general/populate-exchanges)
+                               :href "#/"}
+                           "reset exchanges"]]
+                )
+          (client_menu_right)
+          )
   )
 
 

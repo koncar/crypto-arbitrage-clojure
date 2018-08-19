@@ -22,7 +22,7 @@
 (defn sign-up-success [body]
   (reset! comp_general/user (:user body))
   (reset! comp_general/user_logged true)
-  (comp_menus/populate-menu (:admin body))
+  (comp_menus/populate-menu (:admin (:user body)))
   (comp_messages/success-message-from-response body)
   (secretary/dispatch! "/home")
   )
@@ -107,7 +107,7 @@
   (reset! comp_general/user (:user body))
   (reset! comp_general/user_logged true)
   (comp_messages/success-message-from-response body)
-  (comp_menus/populate-menu (:admin body))
+  (comp_menus/populate-menu (:admin (:user body)))
   (println @comp_general/user)
   (secretary/dispatch! "/home")
   )

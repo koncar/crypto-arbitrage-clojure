@@ -2,30 +2,97 @@
   (:require [reagent.core :as reagent]
             [cryptoarbitragefrontend.http-client :as client]
             [cryptoarbitragefrontend.comp_alert-messages :as comp_messages]
-            [cryptoarbitragefrontend.comp_profile :as comp_profile]))
+            [cryptoarbitragefrontend.comp_profile :as comp_profile]
+            [cryptoarbitragefrontend.comp_general :as comp_general]
+            [hickory.core :as hick]
+            )
+)
 
 (defonce blog-posts (reagent/atom (sorted-map)))
 (defonce sorted-posts (reagent/atom (sorted-map)))
 (defonce counter (reagent/atom 0))
 
-(defn add-post [title description text date thumbs user]
+(defn add-post [post_id title description text date thumbs user]
   (let [id (swap! counter inc)]
-    (swap! blog-posts assoc id {:title title :description description :text text :date date :thumbs thumbs :user user})
+    (swap! blog-posts assoc id {:id post_id :title title :description description :text text :date date :thumbs thumbs :user user})
     id
     ))
 
-(defn add-post-link [title description text date thumbs user]
+(defn add-post-link [post_id title description text date thumbs user]
   (let [id (swap! counter inc)]
-    (swap! sorted-posts assoc id {:title title :description description :text text :date date :thumbs thumbs :user user})
+    (swap! sorted-posts assoc id {:id post_id :title title :description description :text text :date date :thumbs thumbs :user user})
     id
     ))
+
+
+(defonce post-that-is-opened (reagent/atom nil))
+(defonce opened-post-thumbs (reagent/atom nil))
+(defn success-thumbs-up [body]
+  (reset! opened-post-thumbs (+ 1 @opened-post-thumbs))
+  (comp_messages/success-message-from-response body)
+  )
+(defn success-thumbs-down [body]
+  (reset! opened-post-thumbs (- @opened-post-thumbs 1))
+  (comp_messages/success-message-from-response body)
+  )
+(defn thumbs-up [id]
+  (client/post-resource (str "http://localhost:8080/blog-post-thumbs-up/" id) {:id (:_id @comp_general/user)} success-thumbs-up comp_messages/fail-message-from-response)
+  )
+(defn thumbs-down [id]
+  (client/post-resource (str "http://localhost:8080/blog-post-thumbs-down/" id) {:id (:_id @comp_general/user)} success-thumbs-down comp_messages/fail-message-from-response)
+  )
+
+(defn post-full []
+  (fn [{:keys [id title description text date thumbs user]}]
+    [:div.card.mt-5.p-2.col-xl-12.full-post
+
+     [:a {:href (str "#/post" id)}
+      [:h2 title]
+      ]
+     [:h5 (str description ", " date)]
+     (map hick/as-hiccup (hick/parse-fragment text))
+
+     [:div.row.ml-1
+      [:label.mr-1 "Posted by: "]
+      [:a {:href     (str "#/me?id=" (:_id user))
+           :on-click #(comp_profile/open_profile user false)} (:username user)]
+      [:span.glyphicon.glyphicon-thumbs-up.ml-2.mr-1]
+      [:p @opened-post-thumbs]
+      ]
+     [:h6 "Vote:"]
+     [:div.row.ml-1
+      [:a.glyphicon-thumbs-up.mr-2 {
+                                    :on-click #(thumbs-up id)}]
+      [:a.glyphicon-thumbs-down {
+                                 :on-click #(thumbs-down id)}]
+      ]]
+
+    ))
+
+(defn opened-post []
+  [:div.container {:style {:margin-top 100}}
+   [:div.row.mt-5.col-xl-12
+    [:div.col-xl-12
+     ^{:key (:id post-that-is-opened)} [post-full @post-that-is-opened]
+     ]
+    ]
+   ]
+  )
+
+(defn open-post [id title description text date thumbs user]
+  (reset! opened-post-thumbs thumbs)
+  (reset! post-that-is-opened {:id id :title title :description description :text text :date date :thumbs thumbs :user user} )
+  )
 
 (defn post []
-  (fn [{:keys [title description text date thumbs user]}]
+  (fn [{:keys [id title description text date thumbs user]}]
     [:div.card.mt-5.p-2
-     [:h2 title]
+     [:a {:href (str "#/post/" id)
+          :on-click #(open-post id title description text date thumbs user)}
+      [:h2 title]]
      [:h5 (str description ", " date)]
-     [:p text]
+     [:div
+      (map hick/as-hiccup (hick/parse-fragment text))]
      [:div.row.ml-1
       [:label.mr-1 "Posted by: "]
       [:a {:href     (str "#/me?id=" (:_id user))
@@ -38,9 +105,11 @@
 
 
 (defn post-link []
-  (fn [{:keys [title description text date thumbs user]}]
+  (fn [{:keys [id title description text date thumbs user]}]
     [:div.card.mt-1.p-2
-     [:h2 title]
+     [:a {:href     (str "#/post/" id)
+          :on-click #(open-post id title description text date thumbs user)
+          } [:h2 title]]
      [:h6 (str description ", " date)]
      [:div.row.ml-1
       [:label.mr-1 "Posted by: "]
@@ -49,8 +118,6 @@
        [:span.glyphicon.glyphicon-thumbs-up.ml-2.mr-1]
       [:p thumbs]
       ]
-
-
      ]
     ))
 
@@ -65,9 +132,9 @@
          [:h1 "Blog posts"]
          (when (-> items count pos?)
            [:div
-            (for [todo (filter (case @filed
+            (for [item (filter (case @filed
                                  :all identity) items)]
-              ^{:key (:id todo)} [post todo])
+              ^{:key (:id item)} [post item])
             ]
            )
          ]
@@ -75,9 +142,9 @@
         [:h1 "Popular posts"]
          (when (-> sorted-items count pos?)
            [:div
-            (for [todo (filter (case @filed
+            (for [item (filter (case @filed
                                  :all identity) sorted-items)]
-              ^{:key (:id todo)} [post-link todo])
+              ^{:key (:id item)} [post-link item])
             ]
            )
          ]
@@ -89,16 +156,18 @@
     (loop [x 0]
       (when (if (< (count body) 5)  (< x (count body)) (< x 5))
         (do
-          (println x)
-          (println (nth sorted x))
-            (add-post-link (:title (nth sorted x)) (:description (nth sorted x)) (:text (nth sorted x)) (:date (nth sorted x)) (:thumbs (nth sorted x)) (:user (nth sorted x))))
+          ;(println x)
+          (println (hick/as-hiccup (hick/parse (:text (nth sorted x)))))
+          ;(println (nth sorted x))
+            (add-post-link (:_id (nth sorted x)) (:title (nth sorted x)) (:description (nth sorted x)) (:text (nth sorted x)) (:date (nth sorted x)) (:thumbs (nth sorted x)) (:user (nth sorted x))))
         (recur (+ x 1))
         )
       ))
   (loop [x 0]
     (when (< x (count body))
-      (do (println (nth body x))
-        (add-post (:title (nth body x)) (:description (nth body x)) (:text (nth body x)) (:date (nth body x)) (:thumbs (nth body x)) (:user (nth body x))))
+      (do
+        ;(println (nth body x))
+        (add-post (:_id (nth body x)) (:title (nth body x)) (:description (nth body x)) (:text (nth body x)) (:date (nth body x)) (:thumbs (nth body x)) (:user (nth body x))))
       (recur (+ x 1))
       )
     )
