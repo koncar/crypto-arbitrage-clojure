@@ -6,15 +6,8 @@
             [clj-http.client :as client]
             [clojure.java.io :as io]
             [cryptoarbitrage.cryptoapis :as apis]
-            [clj-time.format :as f]
-            [clj-time.core :as t]
-            [clj-time.local :as l]
-            [clj-time.coerce :as c]
-
-            [monger.core :as mg]
-            [monger.collection :as mc]
-            [monger.credentials :as mcr]
             [clojure.data.json :as json]
+            [postal.core :as email]
             ))
 
 (defn login [req]
@@ -306,6 +299,36 @@
           (helper/form-success {:message "Successfully populated pairs"})
           )
       (helper/form-fail {:message "Wrong password"})
+      )
+    )
+  )
+
+(defn email-me [req]
+  (let [json_body (doto (helper/read-body req))
+        name (doto (:name json_body))
+        email (doto (:name json_body))
+        subject (doto (:name json_body))
+        message (doto (:name json_body))
+        ]
+    (if (and (not(str/blank? email)) (not(str/blank? subject)) (not (str/blank? name)) (not (str/blank? message)))
+      (do
+           (email/send-message {:host "smtp.1and1.com"
+                          :port 587
+                                :auth true
+                          :user "test@miracledojo.com"
+                          :pass "Thisistestemail.123"}
+                         {:from "test@miracledojo.com"
+                          :to "skoncar@live.com"
+                          :subject subject
+                          :body [:alternative
+                                 {:type "text/plain"
+                                  :content "This is a test."}
+                                 {:type "text/html"
+                                  :content message}
+                                 ]})
+        (helper/form-success {:message "Email successfully sent"})
+        )
+      (helper/form-fail {:message "Email, subject, name and message cannot be empty"})
       )
     )
   )

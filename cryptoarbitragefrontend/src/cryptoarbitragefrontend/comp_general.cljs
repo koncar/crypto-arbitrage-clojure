@@ -5,6 +5,7 @@
             [re-com.util :refer [item-for-id remove-id-item insert-nth]]
             [reagent.core :as reagent]
             [cryptoarbitragefrontend.comp_alert-messages :as comp_messages]
+            [cryptoarbitragefrontend.comp_contact_form :as comp_contact_form]
 )
 
   )
@@ -22,6 +23,7 @@
     [:hr.star-light]
     [:h2.font-weight-light.mb-0 "crypto arbitrage calculator collects data from famous crypto exchanges and calculates circles you can use to make profit"]
     ]])
+
 (defn footer []
 
   [:footer.footer.text-center.sticky-bottom
@@ -36,18 +38,6 @@
      [:div.col-md-4.mb-5.mb-lg-0
       [:h4.text-uppercase.mb-4 "Author"]
       [:ul.list-inline.mb-0
-       ;[:li.list-inline-item
-       ; [:a.btn.btn-outline-light.btn-social.text-center.rounded-circle
-       ;  {:href "#"}
-       ;  [:i.fa.fa-fw.fa-facebook]]]
-       ;[:li.list-inline-item
-       ; [:a.btn.btn-outline-light.btn-social.text-center.rounded-circle
-       ;  {:href "#"}
-       ;  [:i.fa.fa-fw.fa-google-plus]]]
-       ;[:li.list-inline-item
-       ; [:a.btn.btn-outline-light.btn-social.text-center.rounded-circle
-       ;  {:href "#"}
-       ;  [:i.fa.fa-fw.fa-twitter]]]
        [:li.list-inline-item
         [:a.btn.btn-outline-light.btn-social.text-center.rounded-circle
          {:href "https://www.linkedin.com/in/stevan-koncar-a628508b/"}
@@ -56,7 +46,12 @@
         [:a.btn.btn-outline-light.btn-social.text-center.rounded-circle
          {:href "mailto:skoncar@live.com"}
          [:i.fa.fa-fw.fa-envelope]]]
-       ]]
+       ]
+      [:div.container
+       (comp_contact_form/contact-form)
+       ]
+
+      ]
      [:div.col-md-4
       [:h4.text-uppercase.mb-4 "About Crypto-Arbitrager"]
       [:p.lead.mb-0

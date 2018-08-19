@@ -25,6 +25,7 @@
     (POST "/save-blog-post/:id" [id :as req] (handler/save_blog_post id req))
     (POST "/blog-post-thumbs-up/:id" [id :as req] (handler/blog_post_thumbs_up id req))
     (POST "/blog-post-thumbs-down/:id" [id :as req] (handler/blog_post_thumbs_down id req))
+    (POST "/email-me" req (handler/email-me req))
     (GET "/get-blog-posts" req (handler/get_blog_posts))
     (GET "/get-blog-posts-sorted" req (handler/get_blog_posts_sorted))
     (GET "/get-my-blog-posts/:id" [id :as req] (handler/get_my_blog_posts id))
