@@ -1,13 +1,13 @@
-(ns cryptoarbitragefrontend.comp_sign_forms
+(ns cryptoarbitragefrontend.comp-sign-forms
   (:require [reagent.core :as reagent]
             [re-com.core :refer [h-box v-box box gap line single-dropdown input-text checkbox label title hyperlink-href button p alert-list alert-box]]
             [re-com.dropdown :refer [filter-choices-by-keyword single-dropdown-args-desc]]
             [re-com.util :refer [item-for-id remove-id-item insert-nth]]
             [cryptoarbitragefrontend.http-client :as client]
-            [cryptoarbitragefrontend.comp_alert-messages :as comp_messages]
-            [cryptoarbitragefrontend.comp_general :as comp_general]
-            [cryptoarbitragefrontend.comp_menus :as comp_menus]
-            [cryptoarbitragefrontend.comp_countries :as comp_countries]
+            [cryptoarbitragefrontend.comp-messages :as comp_messages]
+            [cryptoarbitragefrontend.comp-general :as comp_general]
+            [cryptoarbitragefrontend.comp-menus :as comp_menus]
+            [cryptoarbitragefrontend.comp-countries :as comp_countries]
             [secretary.core :as secretary]
             [cryptoarbitragefrontend.util :as util]))
 

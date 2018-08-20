@@ -1,7 +1,7 @@
-(ns cryptoarbitragefrontend.comp_contact_form
+(ns cryptoarbitragefrontend.comp-contact-form
   (:require [reagent.core :as reagent]
             [cryptoarbitragefrontend.util :as util]
-            [cryptoarbitragefrontend.comp_alert-messages :as comp_messages]
+            [cryptoarbitragefrontend.comp-messages :as comp_messages]
             [cryptoarbitragefrontend.http-client :as client]))
 
 (def message_name (reagent/atom nil))

@@ -1,8 +1,8 @@
-(ns cryptoarbitragefrontend.comp_menus
+(ns cryptoarbitragefrontend.comp-menus
   (:require [reagent.core :as reagent]
-            [cryptoarbitragefrontend.comp_general :as comp_general]
-            [cryptoarbitragefrontend.comp_profile :as comp_profile]
-            [cryptoarbitragefrontend.comp_blog :as comp_blog]
+            [cryptoarbitragefrontend.comp-general :as comp_general]
+            [cryptoarbitragefrontend.comp-profile :as comp_profile]
+            [cryptoarbitragefrontend.comp-blog :as comp_blog]
             [cryptoarbitragefrontend.comp-write-post :as comp_write_blog]
             ))
 

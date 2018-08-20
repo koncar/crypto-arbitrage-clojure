@@ -46,6 +46,16 @@
                                   :currency_2   currency_2
                                   :name         (str currency_1 currency_2)
                                   :display_name (str currency_1 "/" currency_2)})
+           (when (not (mongo/find "unique_pairs" {:_id (str currency_1 "/" currency_2)}))
+             (mongo/insert "unique_pairs" {:_id (str currency_1 "/" currency_2)
+                                           :id (str currency_1 "/" currency_2)
+                                           :current_1 currency_1
+                                           :current_2 currency_2
+                                           :name (str currency_1 currency_2)
+                                           :display_name (str currency_1 "/" currency_2)
+                                           :label (str currency_1 "/" currency_2)
+                                           })
+             )
            )
          (recur (+ x 1))
          )
@@ -71,6 +81,16 @@
                                    :currency_2   currency_2
                                    :name         (str currency_1 currency_2)
                                    :display_name (str currency_1 "/" currency_2)})
+            (when (not (mongo/find "unique_pairs" {:_id (str currency_1 "/" currency_2)}))
+              (mongo/insert "unique_pairs" {:_id (str currency_1 "/" currency_2)
+                                            :id (str currency_1 "/" currency_2)
+                                            :current_1 currency_1
+                                            :current_2 currency_2
+                                            :name (str currency_1 currency_2)
+                                            :display_name (str currency_1 "/" currency_2)
+                                            :label (str currency_1 "/" currency_2)
+                                            })
+              )
             )
           (recur (+ x 1))
           )
@@ -97,6 +117,16 @@
                                    :currency_2   currency_2
                                    :name         (str currency_1 currency_2)
                                    :display_name (str currency_1 "/" currency_2)})
+            (when (not (mongo/find "unique_pairs" {:_id (str currency_1 "/" currency_2)}))
+              (mongo/insert "unique_pairs" {:_id (str currency_1 "/" currency_2)
+                                            :id (str currency_1 "/" currency_2)
+                                            :current_1 currency_1
+                                            :current_2 currency_2
+                                            :name (str currency_1 currency_2)
+                                            :display_name (str currency_1 "/" currency_2)
+                                            :label (str currency_1 "/" currency_2)
+                                            })
+              )
             )
           (recur (+ x 1))
           )

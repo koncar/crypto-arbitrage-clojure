@@ -9,7 +9,7 @@
     [goog.history.EventType :as EventType]
     [cryptoarbitragefrontend.pages :as pages]
     [re-com.box :as box]
-    [cryptoarbitragefrontend.comp_general :as comp_general]))
+    [cryptoarbitragefrontend.comp-general :as comp_general]))
 
 (enable-console-print!)
 

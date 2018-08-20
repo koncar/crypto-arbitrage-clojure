@@ -16,6 +16,7 @@
   (routes
     (GET "/get-me/:id" [id] (handler/get_me id))
     (GET "/get-countries" [] (handler/get_countries))
+    (GET "/get-pairs" [] (handler/get_pairs))
     (POST "/populate-countries" req (handler/populate_countries req))
     (POST "/populate-exchanges" req (handler/populate_exchanges req))
     (POST "/populate-pairs" req (handler/populate_pairs req))

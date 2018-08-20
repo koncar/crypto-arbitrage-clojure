@@ -28,6 +28,10 @@
   [collection query]
   (mc/find-one-as-map db collection query)
   )
+(defn find-all-unique
+  [collection key]
+  (mc/distinct db collection key)
+  )
 
 (defn find-all-with-query [collection query]
   (mc/find-maps db collection query)

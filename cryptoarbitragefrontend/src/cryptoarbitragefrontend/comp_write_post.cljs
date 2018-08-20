@@ -1,10 +1,10 @@
 (ns cryptoarbitragefrontend.comp-write-post
-  (:require [cryptoarbitragefrontend.comp_alert-messages :as comp_messages]
+  (:require [cryptoarbitragefrontend.comp-messages :as comp_messages]
             [secretary.core :as secretary]
-            [cryptoarbitragefrontend.comp_blog :as comp_blog]
+            [cryptoarbitragefrontend.comp-blog :as comp_blog]
             [cryptoarbitragefrontend.http-client :as client]
             [reagent.core :as reagent]
-            [cryptoarbitragefrontend.comp_general :as comp_general]))
+            [cryptoarbitragefrontend.comp-general :as comp_general]))
 
 
 (defonce post_title (reagent/atom nil))

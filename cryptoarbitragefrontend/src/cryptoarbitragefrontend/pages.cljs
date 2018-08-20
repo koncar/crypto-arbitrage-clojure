@@ -1,11 +1,11 @@
 (ns cryptoarbitragefrontend.pages
-  (:require [cryptoarbitragefrontend.comp_general :as comp_pages]
-            [cryptoarbitragefrontend.comp_alert-messages :as comp_messages]
-            [cryptoarbitragefrontend.comp_menus :as comp_menus]
-            [cryptoarbitragefrontend.comp_sign_forms :as comp_forms]
+  (:require [cryptoarbitragefrontend.comp-general :as comp_pages]
+            [cryptoarbitragefrontend.comp-messages :as comp_messages]
+            [cryptoarbitragefrontend.comp-menus :as comp_menus]
+            [cryptoarbitragefrontend.comp-sign-forms :as comp_forms]
             [reagent.core :as reagent]
-            [cryptoarbitragefrontend.comp_profile :as comp_profile]
-            [cryptoarbitragefrontend.comp_blog :as comp_blog]
+            [cryptoarbitragefrontend.comp-profile :as comp_profile]
+            [cryptoarbitragefrontend.comp-blog :as comp_blog]
             [cryptoarbitragefrontend.comp-write-post :as comp_blog_write]
             )
   )

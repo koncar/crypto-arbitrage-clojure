@@ -1,9 +1,9 @@
-(ns cryptoarbitragefrontend.comp_blog
+(ns cryptoarbitragefrontend.comp-blog
   (:require [reagent.core :as reagent]
             [cryptoarbitragefrontend.http-client :as client]
-            [cryptoarbitragefrontend.comp_alert-messages :as comp_messages]
-            [cryptoarbitragefrontend.comp_profile :as comp_profile]
-            [cryptoarbitragefrontend.comp_general :as comp_general]
+            [cryptoarbitragefrontend.comp-messages :as comp_messages]
+            [cryptoarbitragefrontend.comp-profile :as comp_profile]
+            [cryptoarbitragefrontend.comp-general :as comp_general]
             [hickory.core :as hick]
             )
 )

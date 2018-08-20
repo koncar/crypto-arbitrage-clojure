@@ -133,6 +133,10 @@
   (helper/form-success (mongo/find-all "countries"))
   )
 
+(defn get_pairs []
+  (helper/form-success (mongo/find-all "unique_pairs"))
+  )
+
 (defn populate_countries [req]
   (let [json_body (doto (helper/read-body req))
         password (doto (:password json_body))]
@@ -293,6 +297,7 @@
         password (doto (:password json_body))]
     (if (= password "admin")
       (do (mongo/drop "pairs")
+          (mongo/drop "unique_pairs")
           (apis/cex_io-populate-all-pairs false)
           (apis/bit_stamp-populate-all-pairs false)
           (apis/bit_finex-populate-all-pairs false)
@@ -317,15 +322,15 @@
                                       :auth true
                                 :user "test@miracledojo.com"
                                 :pass "Thisistestemail.123"}
-                               {:from "test@miracledojo.com"
-                                :to "skoncar@live.com"      ;;SAMO OVO SME DA SE PROMENI AKO SE SALJE NA DRUGI MEJL
+                               {:from    "test@miracledojo.com"
+                                :to      "skoncar@live.com"      ;;SAMO OVO SME DA SE PROMENI AKO SE SALJE NA DRUGI MEJL
                                 :subject subject
-                                :body [:alternative
-                                       {:type "text/plain"
-                                        :content "This is a test."}
-                                       {:type "text/html"
-                                        :content message}
-                                       ]})
+                                :body    [:alternative
+                                          {:type    "text/plain"
+                                           :content "This is a test."}
+                                          {:type    "text/html"
+                                           :content (str "From: " email "<br>" "Message: <br>" message)}
+                                          ]})
         (helper/form-success {:message "Email successfully sent"})
         )
       (helper/form-fail {:message "Email, subject, name and message cannot be empty"})

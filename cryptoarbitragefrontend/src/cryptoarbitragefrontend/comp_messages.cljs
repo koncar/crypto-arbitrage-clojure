@@ -1,4 +1,4 @@
-(ns cryptoarbitragefrontend.comp_alert-messages
+(ns cryptoarbitragefrontend.comp-messages
   (:require [reagent.core :as reagent]))
 
 

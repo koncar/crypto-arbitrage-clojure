@@ -1,8 +1,8 @@
-(ns cryptoarbitragefrontend.comp_countries
+(ns cryptoarbitragefrontend.comp-countries
   (:require [reagent.core :as reagent]
             [re-com.core :refer [h-box v-box box gap line single-dropdown input-text checkbox label title hyperlink-href button p alert-list alert-box]]
             [cryptoarbitragefrontend.http-client :as client]
-            [cryptoarbitragefrontend.comp_alert-messages :as comp_messages]))
+            [cryptoarbitragefrontend.comp-messages :as comp_messages]))
 
 
 (defonce countries (reagent/atom []))

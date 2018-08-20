@@ -1,8 +1,8 @@
-(ns cryptoarbitragefrontend.comp_profile
-  (:require [cryptoarbitragefrontend.comp_countries :as comp_countries]
+(ns cryptoarbitragefrontend.comp-profile
+  (:require [cryptoarbitragefrontend.comp-countries :as comp_countries]
             [reagent.core :as reagent]
             [clojure.string :as str]
-            [cryptoarbitragefrontend.comp_alert-messages :as comp_messages]
+            [cryptoarbitragefrontend.comp-messages :as comp_messages]
             [cryptoarbitragefrontend.http-client :as client]
             [re-com.util :refer [item-for-id remove-id-item insert-nth]]
             ))
