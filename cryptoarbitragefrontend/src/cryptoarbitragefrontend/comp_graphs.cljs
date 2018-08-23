@@ -1,19 +1,25 @@
 (ns cryptoarbitragefrontend.comp-graphs
-  (:require [reagent.core :as reagent]))
+  (:require-macros [cljs.core.async.macros :refer [go]])
+  (:require [reagent.core :as reagent]
+            [cljs-http.client :as client]
+            [cljs.core.async :refer [<!]]
+            ))
 
-(defn home-render []
+(defn chart-holder []
 
-  [:div {:style {:min-width "310px" :max-width "800px"
-                 :height "400px" :margin "0 auto"}}])
+  [:div {:style {:min-width "310px"
+                 :height "1000px" :margin "0 auto"}}
+   ])
 
-(def chart-config
+(defn chart-config [exchanges series]
+
   {:chart {:type "bar"}
-   :title {:text "Historic World Population by Region"}
-   :subtitle {:text "Source: Wikipedia.org"}
-   :xAxis {:categories ["Africa" "America" "Asia" "Europe" "Oceania"]
+   :title {:text "ALL CRYPTO PAIRS GRAPH"}
+   :subtitle {:text "Source: Crypto-Arbitrager"}
+   :xAxis {:categories exchanges
            :title {:text nil}}
    :yAxis {:min 0
-           :title {:text "Population (millions)"
+           :title {:text "Price (decimals)"
                    :align "high"}
            :labels {:overflow "justify"}}
    :tooltip {:valueSuffix " millions"}
@@ -21,24 +27,27 @@
    :legend {:layout "vertical"
             :align "right"
             :verticalAlign "top"
-            :x -40
-            :y 100
+            :x 0
+            :y 230
             :floating true
             :borderWidth 1
             :shadow true}
    :credits {:enabled false}
-   :series [{:name "Year 1800"
-             :data [107 31 635 203 2]}
-            {:name "Year 1900"
-             :data [133 156 947 408 6]}
-            {:name "Year 2008"
-             :data [973 914 4054 732 34]}]
+   :series series
    }
   )
+;(js/Highcharts.Chart. (reagent/dom-node this) (clj->js chart-config))
+(defn chart-did-mount [this]
+  (go (let [response (<! (client/get "http://localhost:8080/get-price-on-exchanges"
+                                     {:with-credentials? false}))]
+        (println (:body response))
+        (if (= (:status response) 200)
+           (js/Highcharts.Chart. (reagent/dom-node this) (clj->js (chart-config (:exchanges (:body response)) (:data (:body response)))))
+          )
+        )
+      )
+  )
 
-(defn home-did-mount [this]
-  (js/Highcharts.Chart. (reagent/dom-node this) (clj->js chart-config)))
-
-(defn home []
-  (reagent/create-class {:reagent-render      home-render
-                         :component-did-mount home-did-mount}))
+(defn chart []
+  (reagent/create-class {:reagent-render      chart-holder
+                         :component-did-mount chart-did-mount}))

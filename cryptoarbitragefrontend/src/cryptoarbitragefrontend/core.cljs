@@ -8,7 +8,6 @@
     [goog.events :as events]
     [goog.history.EventType :as EventType]
     [cryptoarbitragefrontend.pages :as pages]
-    [re-com.box :as box]
     [cryptoarbitragefrontend.comp-general :as comp_general]))
 
 (enable-console-print!)

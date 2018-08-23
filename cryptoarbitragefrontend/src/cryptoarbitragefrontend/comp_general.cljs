@@ -96,7 +96,7 @@
       [:td {:colSpan "2"} "Larry the Bird"]
       [:td "@twitter"]]]]
    [:div.container.mt-5
-    [comp_graphs/home]
+    [comp_graphs/chart]
     ]
    ])
 
@@ -108,4 +108,8 @@
 
 (defn populate-exchanges []
   (client/post-resource "http://localhost:8080/populate-exchanges" {:password "admin"} comp_messages/success-message-from-response comp_messages/fail-message-from-response)
+  )
+
+(defn populate-pairs []
+  (client/post-resource "http://localhost:8080/populate-pairs" {:password "admin"} comp_messages/success-message-from-response comp_messages/fail-message-from-response)
   )

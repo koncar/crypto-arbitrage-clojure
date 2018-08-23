@@ -134,8 +134,15 @@
   )
 
 (defn get_pairs []
-  (helper/form-success (mongo/find-all "unique_pairs"))
+  (helper/form-success (mongo/find-all "duplicate_pairs"))
   )
+;(map (apis/get-price (str/split (:label %) #"/") (str/split (:label %) #"/") "CEX"))
+
+(defn get-price-on-exchanges []
+  ;(helper/form-success (apis/get-price-on-exchanges))
+  (helper/form-success (mongo/find "test" {:_id 1}))
+  )
+
 
 (defn populate_countries [req]
   (let [json_body (doto (helper/read-body req))
@@ -298,9 +305,11 @@
     (if (= password "admin")
       (do (mongo/drop "pairs")
           (mongo/drop "unique_pairs")
+          (mongo/drop "duplicate_pairs")
           (apis/cex_io-populate-all-pairs false)
           (apis/bit_stamp-populate-all-pairs false)
           (apis/bit_finex-populate-all-pairs false)
+          (apis/populate-duplicated false)
           (helper/form-success {:message "Successfully populated pairs"})
           )
       (helper/form-fail {:message "Wrong password"})
@@ -337,6 +346,18 @@
       )
     )
   )
+
+(defn descending-price [a b]
+     (helper/form-success {:message "Successfully collected descending prices" :result (apis/descending_price a b) :label "HIGHEST TO LOWEST"})
+     )
+
+(defn ascending-price [a b]
+  (helper/form-success {:message "Successfully collected ascending prices" :result (apis/ascending_price a b) :label "LOWEST TO HIGHEST"})
+
+  )
+
+(defn inner-matrix [a b]
+  (helper/form-success {:message "Successfully collected inner matrix" :result (apis/matrica a b)}))
 
 (defn not_found []
   (helper/form-response 404 (helper/form-json_body {:message "requested resource is not found"})))

@@ -8,15 +8,17 @@
   )
 ;; :as -> require entire name space
 ;; :refer -> takes only symbols and transfers it into working namespace
-(defn -main
-  [& args]
-  (println "Server started"))
+
 
 (defn app []
   (routes
     (GET "/get-me/:id" [id] (handler/get_me id))
     (GET "/get-countries" [] (handler/get_countries))
     (GET "/get-pairs" [] (handler/get_pairs))
+    (GET "/get-price-on-exchanges" [] (handler/get-price-on-exchanges))
+    (GET "/get-inner-matrix/:a/:b" [a b :as req] (handler/inner-matrix a b))
+    (GET "/get-ascending-price/:a/:b" [a b :as req] (handler/ascending-price a b))
+    (GET "/get-descending-price/:a/:b" [a b :as req] (handler/descending-price a b))
     (POST "/populate-countries" req (handler/populate_countries req))
     (POST "/populate-exchanges" req (handler/populate_exchanges req))
     (POST "/populate-pairs" req (handler/populate_pairs req))
@@ -45,5 +47,24 @@
   []
   (server/run-server (app) {:port 8080}))
 
+(defonce server nil)
 
-(defonce server (init-server))
+(defn start-server []
+  (if (nil? server)
+    (def server (init-server))
+    (do
+      (println "Server stoped")
+      (stop-server server)
+        (def server (init-server))
+        )
+    )
+  (println "Server started")
+  )
+
+(start-server)
+
+(defn -main
+  [& args]
+  (start-server)
+  )
+

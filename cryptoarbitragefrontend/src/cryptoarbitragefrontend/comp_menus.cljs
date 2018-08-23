@@ -43,6 +43,10 @@
                 [:li.mr-2 {:key 6} [:a {:on-click #(comp_general/populate-exchanges)
                                :href "#/"}
                            "reset exchanges"]]
+                [:li.mr-2 {:key 6} [:a {:on-click #(comp_general/populate-pairs)
+                                        :href "#/"}
+                                    "reset pairs"]]
+
                 )
           (client_menu_right)
           )
