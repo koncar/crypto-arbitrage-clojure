@@ -1,10 +1,10 @@
 # Crypto-Arbitrager
 
-Projekat Crypto-Arbitrager napisan je u Clojure i ClojureScript jeziku, i ideja je da pruži informacije o ceni kriptovaluta na različitim menjačnicama, kao i da izračuna i prikaže krugove koje je moguće nepraviti kako bi se ostvario profit.
+Projekat Crypto-Arbitrager napisan je u Clojure i ClojureScript jeziku, i ideja je da pruži informacije o ceni kriptovaluta na različitim menjačnicama, kao i da izračuna i prikaže krugove koje je moguće napraviti kako bi se ostvario profit.
 
 Prikaz informacija o krugovima trgovine izvšen je kroz tabelu (CRYPTOMATRIX) i kroz grafikon prikaza svih cena podržanih parova na svim menjačnicama kriptovaluta.
 Dodatno projekat poseduje login, registraciju korisnika, prikaz profila, prikaz blog objava, određen nivo autorizacije korisnika (samo admin i klijent trenutno postoje), gde u slučaju adminskog pristupa dozvoljeno je pisanje blog objava.
-Sa adminskom autentifikacijom dozvoljeno je okidanje određenih API endpointa servera, koji služe za resetovanje baze i punjenje neophodnim informacijama (resetovanje podržanih menjačnica, resetovanje podržanih parova za trgovanje i resetovanje zemalja koje se koriste prilikom registracije). O svakoj od ovih funcija biće reči malo kasnije.
+Sa adminskom autentifikacijom dozvoljeno je okidanje određenih API endpointa servera, koji služe za resetovanje baze i punjenje neophodnim informacijama (resetovanje podržanih menjačnica, resetovanje podržanih parova za trgovanje i resetovanje zemalja koje se koriste prilikom registracije). O svakoj od ovih funkcija biće reči malo kasnije.
 
 Projekat je razdvojen u dva dela, klijentski i serverski, odnosno front-end i back-end. 
 Serverski projekat nalazi se u folderu cryptoargitrage.
@@ -32,7 +32,7 @@ OPIS: Prihvata ID kao neophodan parametar i vraća registrovanog korisnika u "us
 
 #### URL: /get-countries
 
-OPIS: Vraća sadržaj kolekcije "countries", sve podržane zemlje ra registraciju
+OPIS: Vraća sadržaj kolekcije "countries", sve podržane zemlje za registraciju
 
 #### 3. METODA: GET
 
@@ -68,7 +68,7 @@ OPIS: Vraća sortiranu cenu po menjačnicama u rastućem reposledu za valute :a 
 
 #### URL: /get-descending-price/:a/:b
 
-OPIS: Vraća sortiranu cenu po menjačnicama u opadajućem reposledu  za valute :a i :b
+OPIS: Vraća sortiranu cenu po menjačnicama u opadajućem reposledu za valute :a i :b
 
 #### 9. METODA: POST
 
@@ -82,14 +82,14 @@ Za rad ove metode neophodan je body JSON: {	"password":"admin" } kako bismo imal
 
 #### URL: /populate-exchanges
 
-OPIS: Resetuje podržane menjačnice. Resetovanje se vrši prema hardcodovanim podacima, sobzirom da je potrebno određeno pisanje koda. Kako bi se dodala nova menjačnica potrebno je serverski obezbediti sledeće metode:
+OPIS: Resetuje podržane menjačnice. Resetovanje se vrši prema hardcodovanim podacima, s obzirom da je potrebno određeno pisanje koda. Kako bi se dodala nova menjačnica potrebno je serverski obezbediti sledeće metode:
     1. PRIKUPLJANJE CENA SA SERVERA MENJAČNICE ZA PAR VALUTA
     2. PRIKUPLJANJE SVIH PODRŽANIH PAROVA VALUTA I DODAVANJE ISTIH U BAZU U ODGOVARAJUĆEM FORMATU
     3. DODATI DOKUMENT SA IMENOM, ID-JEM MENJAČNICE I WEBSITE-OM MENJAČNICE.
 
 Ponavljanjem ovog procesa možemo imati mnogo podržanih menjačnica i time obogatiti sadržaj našeg sajta. Pravac daljeg razvoja vodi kad ovome.
     
-Za rad ove metode neophodan je body JSON: {	"password":"admin" } kako bismo imali određen nivo autentifikacije.
+    Za rad ove metode neophodan je body JSON: {	"password":"admin" } kako bismo imali određen nivo autentifikacije.
 
 #### 11. METODA: POST
 
@@ -321,9 +321,18 @@ Sadrži otvorenu blog objavu. Sa ove strance može se glasati palac gore, palac 
 
 ## Server instalacija
 
-Kako bi klijent radio, potrebno je prvo pokrenuti server, a zatim i klijent komandom
+Kako bi klijent radio, potrebno je prvo pokrenuti server, a zatim i klijenta sledećim komandama:
 
+Prvo pokrenemo REPL:
 
+	lein repl
+
+A zatim u REPL-u pokrenemo komande:
+
+	(use 'figwheel-sidecar.repl-api)
+	(start-figwheel!) ;; <-- fetches configuration 
+	(cljs-repl)
+	
 ## Licenca
 
 Copyright © Stevan Koncar
