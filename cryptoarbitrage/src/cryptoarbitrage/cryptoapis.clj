@@ -52,7 +52,7 @@
   )
 
 
-(defn get-price-for-exchanges [currency_1 currency_2 exchanges]
+(defn collect-prices-for-exchanges [currency_1 currency_2 exchanges]
   (println currency_1 currency_2 exchanges)
   (loop [i 0
          list (list)]
@@ -64,15 +64,15 @@
   )
 
 
-(defn get-data-for-price-on-exchanges [pairs exchanges]
-  (map #(conj % {:data (get-price-for-exchanges (:currency_1 %) (:currency_2 %) exchanges)}) (map #(select-keys % [:name :currency_1 :currency_2]) pairs))
+(defn form-data-for-prices-on-exchanges [pairs exchanges]
+  (map #(conj % {:data (collect-prices-for-exchanges (:currency_1 %) (:currency_2 %) exchanges)}) (map #(select-keys % [:name :currency_1 :currency_2]) pairs))
   )
 
-(defn get-price-on-exchanges []
+(defn get-all-supported-pairs-prices-on-exchanges []
   (let [pairs (mongo/find-all "duplicate_pairs")
         exchanges (mongo/find-all "exchanges")
         simple_exchanges (map :name (map #(select-keys % [:name]) exchanges))
-        data (get-data-for-price-on-exchanges pairs exchanges)
+        data (form-data-for-prices-on-exchanges pairs exchanges)
         ]
      {:exchanges simple_exchanges :data data}
     )
@@ -227,26 +227,35 @@
   )
 
 
-(defn matrica [a b]
+(defn matrica [a b ascending_price descending_price]
+  (println ascending_price)
+  (println descending_price)
+  (if (> (count ascending_price) 2)
+    (for [i (range (count ascending_price))]
+      (for [j (range (count descending_price))]
+        [{:value_i  i :value_j j
+          :buy      a
+          :buy_on   (:exchange (nth ascending_price i))
+          :buy_for  (:price (nth ascending_price i))
+          :sell_on  (:exchange (nth descending_price j))
+          :sell_for (:price (nth descending_price j))
+          :sell_valute b
+          :profit   (str (calculate-profit (:price (nth ascending_price i)) (:price (nth descending_price j))) "%")
+          }
+         ]
+        ))
+    false
+    )
+
+  )
+
+(defn get-inner-matrix [a b]
   (let [ascending_price (doto (ascending_price a b))
         descending_price (reverse ascending_price)
-        ]
-    (println ascending_price)
-    (println descending_price)
-    (if (> (count ascending_price) 2)
-      (for [i (range (count ascending_price))]
-        (for [j (range (count descending_price))]
-           [{:value_i  i :value_j j
-             :buy      a
-             :buy_on   (:exchange (nth ascending_price i))
-             :buy_for  (:price (nth ascending_price i))
-             :sell_on  (:exchange (nth descending_price j))
-             :sell_for (:price (nth descending_price j))
-             :profit   (str (calculate-profit (:price (nth ascending_price i)) (:price (nth descending_price j))) "%")
-             }
-            ]
-           ))
-      [[{:message "THAT PAIR IS NOT AVAIABLE"}]]
+        matrix (matrica a b ascending_price descending_price)]
+    (if matrix
+      {:success true :message "Successfully collected inner matrix" :result matrix :ascending_price ascending_price :descending_price descending_price}
+      {:success false :message "That pair is not available" :result (list (list)) :ascending_price (list) :descending_price (list) }
       )
     )
   )

@@ -18,15 +18,16 @@
   )
 
 (defn client_menu_left []
-  (list [:li.mr-2 {:key 1} [:a {:on-click #(comp_profile/open_profile @comp_general/user true)
-             :href     "#/me"} "Profile"]]
-    [:li.mr-2 {:key 2} [:a {:on-click #(comp_blog/fill-posts)
-                            :href     "#/blog"} "Blog"]])
+  (list [:li.mr-2 {:key 1}
+         [:a.fa.fa-user {:on-click #(comp_profile/open_profile @comp_general/user true)
+             :href     "#/me"} " Profile"]]
+    [:li.mr-2 {:key 2} [:a.fab.fa-blogger {:on-click #(comp_blog/fill-posts)
+                            :href     "#/blog"} " Blog"]])
   )
 (defn client_menu_right
   []
-  (list [:li {:key 3} [:a {:on-click #(sign-out)
-                      :href     "#/"} "SIGN OUT"]])
+  (list [:li {:key 3} [:a.fas.fa-sign-out-alt {:on-click #(sign-out)
+                      :href     "#/"} " SIGN OUT"]])
   )
 (defn admin_menu_left []
   (client_menu_left)
@@ -34,16 +35,16 @@
 
 (defn admin_menu_right []
   (concat
-          (list [:li.mr-2 {:key 4} [:a {:on-click #(comp_write_blog/write-blog)
+          (list [:li.mr-2 {:key 4} [:a.fas.fa-edit {:on-click #(comp_write_blog/write-blog)
                                :href     "#/write-blog"}
-                           "WRITE BLOG POST"]]
+                           " WRITE BLOG POST"]]
                 [:li.mr-2 {:key 5} [:a {:on-click #(comp_general/populate-countries)
                                :href "#/"}
                            "reset countries"]]
                 [:li.mr-2 {:key 6} [:a {:on-click #(comp_general/populate-exchanges)
                                :href "#/"}
                            "reset exchanges"]]
-                [:li.mr-2 {:key 6} [:a {:on-click #(comp_general/populate-pairs)
+                [:li.mr-2 {:key 7} [:a {:on-click #(comp_general/populate-pairs)
                                         :href "#/"}
                                     "reset pairs"]]
 
@@ -79,7 +80,7 @@
                             :aria-controls "navbarCollapse"
                             :aria-expanded "false"
                             :aria-label "Toggle navigation"}
-    :span.navbar-toggler-icon]
+    [:span.navbar-toggler-icon]]
    [:div.collapse.navbar-collapse {:id "navbarCollapse"}
     [:ul.navbar-nav.mr-auto
      @left-menu-list

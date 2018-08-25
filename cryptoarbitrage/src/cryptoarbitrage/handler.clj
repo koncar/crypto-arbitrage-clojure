@@ -140,9 +140,43 @@
 
 (defn get-price-on-exchanges []
   ;(helper/form-success (apis/get-price-on-exchanges))
-  (helper/form-success (mongo/find "test" {:_id 1}))
+  (let [last_prices (mongo/find "prices" {:_id 1})]
+    (if last_prices
+      (helper/form-success last_prices)
+      (let [new_prices (apis/get-all-supported-pairs-prices-on-exchanges)]
+        (mongo/insert "prices" (-> new_prices
+                                   (assoc :_id 1)
+                                   (assoc :date (.format (java.text.SimpleDateFormat. "dd/MM/yyyy HH:mm:ss") (new java.util.Date)))))
+        (helper/form-success (-> new_prices
+                                 (assoc :_id 1)
+                                 (assoc :date (.format (java.text.SimpleDateFormat. "dd/MM/yyyy HH:mm:ss") (new java.util.Date)))))
+        )
+      )
+     )
   )
 
+(defn refresh-price-on-exchanges []
+  ;(helper/form-success (apis/get-price-on-exchanges))
+  (let [last_prices (mongo/find "prices" {:_id 1})
+        new_prices last_prices  ;(apis/get-all-supported-pairs-prices-on-exchanges)
+        ]
+    (if last_prices
+      (do (mongo/update "prices" {:_id 1} (-> new_prices
+                                              (assoc :_id 1)
+                                              (assoc :date (.format (java.text.SimpleDateFormat. "dd/MM/yyyy HH:mm:ss") (new java.util.Date)))))
+          (helper/form-success (-> new_prices
+                                   (assoc :_id 1)
+                                   (assoc :date (.format (java.text.SimpleDateFormat. "dd/MM/yyyy HH:mm:ss") (new java.util.Date)))))
+          )
+      (do (mongo/insert "prices" (-> new_prices
+                                     (assoc :_id 1)
+                                     (assoc :date (.format (java.text.SimpleDateFormat. "dd/MM/yyyy HH:mm:ss") (new java.util.Date)))))
+          (helper/form-success (-> new_prices
+                                   (assoc :_id 1)
+                                   (assoc :date (.format (java.text.SimpleDateFormat. "dd/MM/yyyy HH:mm:ss") (new java.util.Date))))))
+      )
+    )
+  )
 
 (defn populate_countries [req]
   (let [json_body (doto (helper/read-body req))
@@ -357,7 +391,13 @@
   )
 
 (defn inner-matrix [a b]
-  (helper/form-success {:message "Successfully collected inner matrix" :result (apis/matrica a b)}))
+  (let [result (apis/get-inner-matrix a b)]
+    (if (:success result)
+      (helper/form-success result)
+      (helper/form-fail result)
+      )
+    )
+  )
 
 (defn not_found []
   (helper/form-response 404 (helper/form-json_body {:message "requested resource is not found"})))

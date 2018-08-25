@@ -6,9 +6,7 @@
             [reagent.core :as reagent]
             [cryptoarbitragefrontend.comp-messages :as comp_messages]
             [cryptoarbitragefrontend.comp-contact-form :as comp_contact_form]
-            [cryptoarbitragefrontend.comp-cryptopairs :as comp_pairs]
-            [cryptoarbitragefrontend.comp-graphs :as comp_graphs]
-)
+            [clojure.string :as str])
 
   )
 
@@ -43,7 +41,7 @@
        [:li.list-inline-item
         [:a.btn.btn-outline-light.btn-social.text-center.rounded-circle
          {:href "https://www.linkedin.com/in/stevan-koncar-a628508b/"}
-         [:i.fa.fa-fw.fa-linkedin]]]
+         [:i.fab.fa-linkedin-in]]]
        [:li.list-inline-item
         [:a.btn.btn-outline-light.btn-social.text-center.rounded-circle
          {:href "mailto:skoncar@live.com"}
@@ -60,45 +58,6 @@
        "crypto arbitrage calculator collects data from famous crypto exchanges and calculates circles you can use to make profit"]]]]]
   )
 
-(defn crypto-arbitrage-table []
-  [:div.container
- {:style {:margin-top "100px"}
-  }
-   [:div.row.mb-1
-    [:h1.float-left.col-md-9
-     "CRYPTOMATRIX"
-     ]
-    [:div.col-md-2
-     (comp_pairs/populate_pairs)]
-    [:button.btn.btn-primary.fa.fa-refresh.col-md-1.text-center
-     ]
-    ]
-   [:table.table.table-bordered.table-dark
-    [:thead
-     [:tr
-      [:th {:scope "col"} "#"]
-      [:th {:scope "col"} "First"]
-      [:th {:scope "col"} "Last"]
-      [:th {:scope "col"} "Handle"]]]
-    [:tbody
-     [:tr
-      [:th {:scope "row"} "1"]
-      [:td "Mark"]
-      [:td "Otto"]
-      [:td "@mdo"]]
-     [:tr
-      [:th {:scope "row"} "2"]
-      [:td "Jacob"]
-      [:td "Thornton"]
-      [:td "@fat"]]
-     [:tr
-      [:th {:scope "row"} "3"]
-      [:td {:colSpan "2"} "Larry the Bird"]
-      [:td "@twitter"]]]]
-   [:div.container.mt-5
-    [comp_graphs/chart]
-    ]
-   ])
 
 
 

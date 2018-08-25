@@ -3,7 +3,7 @@
 
 
 (defonce messages (reagent/atom (sorted-map)))
-(defonce counter (reagent/atom 0))
+(defonce counter (reagent/atom 100))
 
 (defn delete [id] (swap! messages dissoc id))
 
@@ -47,9 +47,9 @@
         }
        (when (-> items count pos?)
          [:div
-          (for [todo (filter (case @filed
+          (for [item (filter (case @filed
                                :all identity) items)]
-            ^{:key (:id todo)} [message todo])
+            ^{:key (:id item)} [message item])
           ]
          )
        ]

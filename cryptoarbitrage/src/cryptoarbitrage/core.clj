@@ -16,6 +16,7 @@
     (GET "/get-countries" [] (handler/get_countries))
     (GET "/get-pairs" [] (handler/get_pairs))
     (GET "/get-price-on-exchanges" [] (handler/get-price-on-exchanges))
+    (GET "/refresh-price-on-exchanges" [] (handler/refresh-price-on-exchanges))
     (GET "/get-inner-matrix/:a/:b" [a b :as req] (handler/inner-matrix a b))
     (GET "/get-ascending-price/:a/:b" [a b :as req] (handler/ascending-price a b))
     (GET "/get-descending-price/:a/:b" [a b :as req] (handler/descending-price a b))

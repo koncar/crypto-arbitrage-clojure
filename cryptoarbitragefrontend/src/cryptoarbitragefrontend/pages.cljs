@@ -7,6 +7,7 @@
             [cryptoarbitragefrontend.comp-profile :as comp_profile]
             [cryptoarbitragefrontend.comp-blog :as comp_blog]
             [cryptoarbitragefrontend.comp-write-post :as comp_blog_write]
+            [cryptoarbitragefrontend.comp-table :as comp_table]
             )
   )
 
@@ -48,7 +49,7 @@
   [:div
    (comp_menus/home-navigation)
    (comp_messages/messages-holder)
-   (comp_pages/crypto-arbitrage-table)
+   (comp_table/crypto-arbitrage-table)
    (comp_pages/footer)
 
    ])
