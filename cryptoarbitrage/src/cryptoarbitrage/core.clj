@@ -20,9 +20,9 @@
     (GET "/get-inner-matrix/:a/:b" [a b :as req] (handler/inner-matrix a b))
     (GET "/get-ascending-price/:a/:b" [a b :as req] (handler/ascending-price a b))
     (GET "/get-descending-price/:a/:b" [a b :as req] (handler/descending-price a b))
-    (POST "/populate-countries" req (handler/populate_countries req))
-    (POST "/populate-exchanges" req (handler/populate_exchanges req))
-    (POST "/populate-pairs" req (handler/populate_pairs req))
+    (POST "/populate-countries" req (handler/populate_countries_req req))
+    (POST "/populate-exchanges" req (handler/populate_exchanges_req req))
+    (POST "/populate-pairs" req (handler/populate_pairs_req req))
     (POST "/update-me/:id" [id :as req] (handler/update_me id req))
     (POST "/change-password/:id" [id :as req] (handler/change-password id req))
     (POST "/register" req (handler/register req))
@@ -39,6 +39,10 @@
     (route/not-found (handler/not_found))
     )
   )
+
+(handler/populate_countries "admin")
+(handler/populate_exchanges "admin")
+(handler/populate_pairs "admin")
 
 (defn stop-server
   [server]
