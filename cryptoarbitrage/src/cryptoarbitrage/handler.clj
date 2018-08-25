@@ -158,7 +158,7 @@
 (defn refresh-price-on-exchanges []
   ;(helper/form-success (apis/get-price-on-exchanges))
   (let [last_prices (mongo/find "prices" {:_id 1})
-        new_prices last_prices  ;(apis/get-all-supported-pairs-prices-on-exchanges)
+        new_prices  (apis/get-all-supported-pairs-prices-on-exchanges) ;last_prices
         ]
     (if last_prices
       (do (mongo/update "prices" {:_id 1} (-> new_prices

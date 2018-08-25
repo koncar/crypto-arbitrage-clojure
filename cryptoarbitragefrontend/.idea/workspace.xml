@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d039901-ca64-464a-bdec-5faf36c7bf48" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../cryptoarbitrage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoarbitrage/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cryptoarbitrage/src/cryptoarbitrage/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoarbitrage/src/cryptoarbitrage/core.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cryptoarbitrage/src/cryptoarbitrage/cryptoapis.clj" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoarbitrage/src/cryptoarbitrage/cryptoapis.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cryptoarbitrage/src/cryptoarbitrage/handler.clj" beforeDir="false" afterPath="$PROJECT_DIR$/../cryptoarbitrage/src/cryptoarbitrage/handler.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_general.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_general.cljs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_graphs.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_graphs.cljs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_menus.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_menus.cljs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_messages.cljs" beforeDir="false" afterPath="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_messages.cljs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,92 +13,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="comp_general.cljs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="comp_general.cljs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_general.cljs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="202" column="32" selection-start-line="202" selection-start-column="32" selection-end-line="202" selection-end-column="32" />
+            <state relative-caret-position="119">
+              <caret line="7" column="77" selection-start-line="7" selection-start-column="77" selection-end-line="7" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/public/css/style.css">
+      <file leaf-file-name="pages.cljs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/pages.cljs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="420" column="13" selection-start-line="420" selection-start-column="13" selection-end-line="420" selection-end-column="13" />
+            <state relative-caret-position="137">
+              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comp_graphs.cljs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_graphs.cljs">
+      <file leaf-file-name="comp_table.cljs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_table.cljs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="78" column="2" selection-start-line="78" selection-start-column="2" selection-end-line="78" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comp_menus.cljs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_menus.cljs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="core.cljs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/core.cljs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-849">
-              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comp_exchanges.cljs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_exchanges.cljs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comp_messages.cljs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_messages.cljs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comp_blog.cljs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_blog.cljs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comp_profile.cljs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_profile.cljs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+            <state relative-caret-position="261">
+              <caret line="123" column="53" lean-forward="true" selection-start-line="123" selection-start-column="53" selection-end-line="123" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -125,7 +52,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>comp_general/user</find>
       <find>upload-</find>
       <find>open_profile</find>
       <find>visi</find>
@@ -149,12 +75,13 @@
       <find>list</find>
       <find>printl</find>
       <find>profile</find>
-      <find>glyphicon</find>
       <find>chart-co</find>
       <find>blog</find>
-      <find>aweso</find>
       <find>table</find>
+      <find>glyphicon</find>
+      <find>aweso</find>
       <find>span.</find>
+      <find>footer</find>
     </findStrings>
     <replaceStrings>
       <replace>opened_user</replace>
@@ -192,14 +119,15 @@
         <option value="$PROJECT_DIR$/src/cryptoarbitragefrontend/core.cljs" />
         <option value="$PROJECT_DIR$/src/cryptoarbitragefrontend/tests.cljs" />
         <option value="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_exchanges.cljs" />
-        <option value="$PROJECT_DIR$/src/cryptoarbitragefrontend/pages.cljs" />
         <option value="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_messages.cljs" />
         <option value="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_graphs.cljs" />
         <option value="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_blog.cljs" />
         <option value="$PROJECT_DIR$/resources/public/index.html" />
         <option value="$PROJECT_DIR$/resources/public/css/style.css" />
         <option value="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_menus.cljs" />
+        <option value="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_table.cljs" />
         <option value="$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_general.cljs" />
+        <option value="$PROJECT_DIR$/src/cryptoarbitragefrontend/pages.cljs" />
       </list>
     </option>
   </component>
@@ -309,7 +237,7 @@
       <recent name="C:\Users\upins\Documents\IdeaProjects\CryptoArbitrageClojure\cryptoarbitragefrontend\resources\public\js" />
     </key>
   </component>
-  <component name="ReplState" timestamp="1535199448517">{:repl-history {:ide [], :local [{:command &quot;(cryptoarbitragefrontend/)&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(cryptoarbitragefrontend/http_client\n  )&quot;, :offset 39, :ns &quot;dev:cljs.user&quot;} {:command &quot;(cryptoarbitragefrontend.http_client)&quot;, :offset 25, :ns &quot;dev:cljs.user&quot;} {:command &quot;(cryptoarbitragefrontend.http_client/get-response-sync)&quot;, :offset 54, :ns &quot;dev:cljs.user&quot;} {:command &quot;(cryptoarbitragefrontend.http_client/get-response-sync \&quot;url\&quot;)&quot;, :offset 59, :ns &quot;dev:cljs.user&quot;} {:command &quot;(use '(cljs.test))&quot;, :offset 16, :ns &quot;user&quot;} {:command &quot;(use [cljs.test])&quot;, :offset 15, :ns &quot;user&quot;} {:command &quot;(cljs.test/run-all-tests)&quot;, :offset 24, :ns &quot;user&quot;} {:command &quot;(enable-console-print!)&quot;, :offset 22, :ns &quot;user&quot;} {:command &quot;(cljs.test/run-tests)&quot;, :offset 15, :ns &quot;user&quot;} {:command &quot;(cljs.test/run-tests 'sc-repo.core)&quot;, :offset 35, :ns &quot;user&quot;} {:command &quot;(cljs.test/run-tests 'cryptoarbitragefrontend.tests)&quot;, :offset 51, :ns &quot;user&quot;} {:command &quot;(use '[cljs.test])&quot;, :offset 16, :ns &quot;user&quot;} {:command &quot;(use '[cljs.test :as s])&quot;, :offset 22, :ns &quot;user&quot;} {:command &quot;(require '[cljs.test :as s])&quot;, :offset 8, :ns &quot;user&quot;} {:command &quot;(s/run-tests)&quot;, :offset 12, :ns &quot;user&quot;} {:command &quot;(s/run-tests (cryptoarbitragefrontend.tests))&quot;, :offset 43, :ns &quot;user&quot;} {:command &quot;(s/run-tests cryptoarbitragefrontend.tests)&quot;, :offset 42, :ns &quot;user&quot;} {:command &quot;(s/run-all-tests)&quot;, :offset 16, :ns &quot;user&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1535200284737">{:repl-history {:ide [], :local [{:command &quot;(cryptoarbitragefrontend/)&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(cryptoarbitragefrontend/http_client\n  )&quot;, :offset 39, :ns &quot;dev:cljs.user&quot;} {:command &quot;(cryptoarbitragefrontend.http_client)&quot;, :offset 25, :ns &quot;dev:cljs.user&quot;} {:command &quot;(cryptoarbitragefrontend.http_client/get-response-sync)&quot;, :offset 54, :ns &quot;dev:cljs.user&quot;} {:command &quot;(cryptoarbitragefrontend.http_client/get-response-sync \&quot;url\&quot;)&quot;, :offset 59, :ns &quot;dev:cljs.user&quot;} {:command &quot;(use '(cljs.test))&quot;, :offset 16, :ns &quot;user&quot;} {:command &quot;(use [cljs.test])&quot;, :offset 15, :ns &quot;user&quot;} {:command &quot;(cljs.test/run-all-tests)&quot;, :offset 24, :ns &quot;user&quot;} {:command &quot;(enable-console-print!)&quot;, :offset 22, :ns &quot;user&quot;} {:command &quot;(cljs.test/run-tests)&quot;, :offset 15, :ns &quot;user&quot;} {:command &quot;(cljs.test/run-tests 'sc-repo.core)&quot;, :offset 35, :ns &quot;user&quot;} {:command &quot;(cljs.test/run-tests 'cryptoarbitragefrontend.tests)&quot;, :offset 51, :ns &quot;user&quot;} {:command &quot;(use '[cljs.test])&quot;, :offset 16, :ns &quot;user&quot;} {:command &quot;(use '[cljs.test :as s])&quot;, :offset 22, :ns &quot;user&quot;} {:command &quot;(require '[cljs.test :as s])&quot;, :offset 8, :ns &quot;user&quot;} {:command &quot;(s/run-tests)&quot;, :offset 12, :ns &quot;user&quot;} {:command &quot;(s/run-tests (cryptoarbitragefrontend.tests))&quot;, :offset 43, :ns &quot;user&quot;} {:command &quot;(s/run-tests cryptoarbitragefrontend.tests)&quot;, :offset 42, :ns &quot;user&quot;} {:command &quot;(s/run-all-tests)&quot;, :offset 16, :ns &quot;user&quot;}], :remote []}}</component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -440,20 +368,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/core.async/0.4.474/core.async-0.4.474.jar!/cljs/core/async/macros.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/google-closure-library/0.0-20170809-b9c14c6b/google-closure-library-0.0-20170809-b9c14c6b.jar!/goog/events/events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/google-closure-library/0.0-20170809-b9c14c6b/google-closure-library-0.0-20170809-b9c14c6b.jar!/goog/history/eventtype.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
@@ -671,13 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/pages.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_sign_forms.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17">
@@ -748,10 +655,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_table.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="123" column="53" lean-forward="true" selection-start-line="123" selection-start-column="53" selection-end-line="123" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/comp_general.cljs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="202" column="32" selection-start-line="202" selection-start-column="32" selection-end-line="202" selection-end-column="32" />
+        <state relative-caret-position="119">
+          <caret line="7" column="77" selection-start-line="7" selection-start-column="77" selection-end-line="7" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cryptoarbitragefrontend/pages.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
         </state>
       </provider>
     </entry>
