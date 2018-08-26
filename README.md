@@ -33,18 +33,18 @@ Restore baze: nije obavezan, ali baza sadrži početne podatke, pa može biti ko
 
 * Pod uslovom da je leiningen instaliran i dodat u path
 
-	cd <putanja do cryptoarbitrage foldera>
-	lein run
+        cd <putanja do cryptoarbitrage foldera>
+        lein run
 
 ### 3. Klijent
 
 * Pod uslovom da je leiningen instaliran i dodat u path
 
-	cd <putanja do cryptoarbitragefrontend foldera>
-	lein repl
-	(use 'figwheel-sidecar.repl-api)
-	(start-figwheel!) ;; <-- fetches configuration 
-	(cljs-repl)
+        cd <putanja do cryptoarbitragefrontend foldera>
+        lein repl
+        (use 'figwheel-sidecar.repl-api)
+        (start-figwheel!) ;; <-- fetches configuration 
+        (cljs-repl)
 
 ### 4. Login
 
@@ -52,14 +52,13 @@ Restore baze: nije obavezan, ali baza sadrži početne podatke, pa može biti ko
 
 Adminski login:
 
-email: admin@admin.com
-password: admin
+        email: admin@admin.com
+        password: admin
 
 Klijentski login:
 
-email: asdf@asdf.com
-
-password: asdf
+        email: asdf@asdf.com
+        password: asdf
 
 # Server
 Serverski deo implementiran je kao REST veb servis. Kao bazu podataka koristi Mongo. Za razmenu podataka koriste se uglavnom JSON-i, uz jedan slučaj gde klijent može upload-ovati sliku, u tom slučaju u komunikaciji se koriste byte-ovi, odnosno binarni podaci.
