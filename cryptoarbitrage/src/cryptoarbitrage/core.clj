@@ -40,6 +40,7 @@
     )
   )
 
+;;this line should be commented after first server start
 (handler/populate_countries "admin")
 (handler/populate_exchanges "admin")
 (handler/populate_pairs "admin")

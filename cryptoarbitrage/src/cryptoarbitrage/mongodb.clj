@@ -42,6 +42,11 @@
   (mc/find-maps db collection query)
   )
 
+(defn count
+  [collection]
+  (mc/count db collection)
+  )
+
 (defn remove
   [collection query]
   (mc/remove db collection query)

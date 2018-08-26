@@ -213,7 +213,10 @@
         ]
     (if (or (str/blank? title) (str/blank? description) (str/blank? text))
       (helper/form-fail {:message "Title, description and text can't be empty"})
-      (let [user (mongo/find "users" {:_id id})]
+      (let [user (mongo/find "users" {:_id id})
+            all_blog_posts (mongo/find-all "blog_posts")
+            last_post (last all_blog_posts)
+            ]
         (if (nil? user)
           (helper/form-fail {:message "User is not found"})
           (do (mongo/insert "blog_posts" (-> json_body
@@ -221,7 +224,7 @@
                                           (assoc :user user)
                                              (assoc :thumbs 0)
                                              (assoc :text text_fixed)
-                                          (assoc :_id (+ 1 (:_id (last (mongo/find-all "blog_posts")))))
+                                          (assoc :_id (if (not (nil? last_post)) (+ 1 (:_id last_post)) 0))
                                              (assoc :thumbs_by (list))
                                           (assoc :date (.format (java.text.SimpleDateFormat. "dd/MM/yyyy HH:mm:ss") (new java.util.Date)))
                                           )

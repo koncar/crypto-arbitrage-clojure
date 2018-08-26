@@ -20,7 +20,8 @@
    [:div.container
     [:img.img-fluid.mb-5.d-block.mx-auto {:src "img/bitcoin-icon.png" :height 256 :width 256 :alt "bitcoin-icon"}]
     [:h1.text-uppercase.mb-0 "CRYPTO-ARBITRAGER"]
-    [:hr.star-light]
+    [:hr]
+    [:hr.fas.fa-star]
     [:h2.font-weight-light.mb-0 "crypto arbitrage calculator collects data from famous crypto exchanges and calculates circles you can use to make profit"]
     ]])
 

@@ -46,43 +46,45 @@
   )
 
 (defn table-dat []
-  (for [i (range (count @ascending_price_exchanges))]
-    [:tr (let
-           [exchange (nth @ascending_price_exchanges i)][:th.table-dark {:scope "row"
-                                                                         :style {:background-color "#696969"}
-                                                                         }
-                                                         [:h2 (:name (:exchange exchange))]
-                                                         [:a
-                                                          {:href (:website (:exchange exchange))}
-                                                          (:website (:exchange exchange))
-                                                          ]
-                                                         [:h5 (:price exchange)]
-                                                         ])
-     (for [j (range (count @descending_price_exchanges))]
-       (let [current_cell (nth (nth (nth @matrix i) j) 0)]
-         [:td.table-dark {:scope "cell"}
-          [:h4 (str "BUY " (:buy current_cell) " ON " (:name (:buy_on current_cell)))]
-          [:p (str "FOR " (:buy_for current_cell) " " (:sell_valute current_cell))]
-          [:h4 (str "SELL ON " (:name (:sell_on current_cell)))]
-          [:p (str "FOR " (:sell_for current_cell) " " (:sell_valute current_cell))]
-          [:h3
-           {:style {:color (if (= "0.0%" (:profit current_cell))
-                             "blue"
-                             (if (= "-" (first (:profit current_cell)))
-                               "red"
-                               "green")
+  (doall(for [i (range (count @ascending_price_exchanges))]
+     [:tr {:key i} (let
+                     [exchange (nth @ascending_price_exchanges i)] [:th.table-dark {:scope "row"
+                                                                                    :style {:background-color "#696969"}
+                                                                                    }
+                                                                    [:h2 (:name (:exchange exchange))]
+                                                                    [:a
+                                                                     {:href (:website (:exchange exchange))}
+                                                                     (:website (:exchange exchange))
+                                                                     ]
+                                                                    [:h5 (:price exchange)]
+                                                                    ])
+      (doall (for [j (range (count @descending_price_exchanges))]
+               (let [current_cell (nth (nth (nth @matrix i) j) 0)]
+                 [:td.table-dark.table-sm {:key j
+                                  :scope "cell"
+                                  }
+                  [:h4 (str "BUY " (:buy current_cell) " ON " (:name (:buy_on current_cell)))]
+                  [:p (str "FOR " (:buy_for current_cell) " " (:sell_valute current_cell))]
+                  [:h4 (str "SELL ON " (:name (:sell_on current_cell)))]
+                  [:p (str "FOR " (:sell_for current_cell) " " (:sell_valute current_cell))]
+                  [:h3
+                   {:style {:color (if (= "0.0%" (:profit current_cell))
+                                     "blue"
+                                     (if (= "-" (first (:profit current_cell)))
+                                       "red"
+                                       "green")
 
-                             )
-                    }}
-           (str "PROFIT: " (:profit current_cell))
+                                     )
+                            }}
+                   (str "PROFIT: " (:profit current_cell))
 
-           ]
+                   ]
 
-          ]
-         )
-       )
-     ]
-    )
+                  ]
+                 )
+               ))
+      ]
+     ))
   )
 
 (defn make-table-from-response []

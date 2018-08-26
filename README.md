@@ -10,6 +10,57 @@ Projekat je razdvojen u dva dela, klijentski i serverski, odnosno front-end i ba
 Serverski projekat nalazi se u folderu cryptoargitrage.
 Klijenski projekat nalazi se u folderu cryptoarbitragefrontend.
 
+# Quick start
+
+Ovo je najbrži način da se pokrene i testira aplikacija. Kasnije u dokumentaciji postoji pod sekcijama Server instalacija i klijent instalacija šta bi trebalo izbaciti iz koda jer su primenjene loše prakse pozivanja metoda direktno pri startu servera.
+
+Internet je potreban za rad aplikacije, s obzirom da server komunicira sa spoljnim API endpointima.
+
+### 1. Baza
+
+* Pod uslovom da je MongoDB baza instalirana i dodata u path
+
+Pokrenuti bazu komandom 
+	
+	mongod
+
+Restore baze: nije obavezan, ali baza sadrži početne podatke, pa može biti korisno
+
+	mongorestore -d monger-test <putanja do "db" direktorijuma> /db/monger-test
+
+
+### 2. Server
+
+* Pod uslovom da je leiningen instaliran i dodat u path
+
+	cd <putanja do cryptoarbitrage foldera>
+	lein run
+
+### 3. Klijent
+
+* Pod uslovom da je leiningen instaliran i dodat u path
+
+	cd <putanja do cryptoarbitragefrontend foldera>
+	lein repl
+	(use 'figwheel-sidecar.repl-api)
+	(start-figwheel!) ;; <-- fetches configuration 
+	(cljs-repl)
+
+### 4. Login
+
+* Pod uslovom da je restorovana baza:
+
+Adminski login:
+
+email: admin@admin.com
+password: admin
+
+Klijentski login:
+
+email: asdf@asdf.com
+
+password: asdf
+
 # Server
 Serverski deo implementiran je kao REST veb servis. Kao bazu podataka koristi Mongo. Za razmenu podataka koriste se uglavnom JSON-i, uz jedan slučaj gde klijent može upload-ovati sliku, u tom slučaju u komunikaciji se koriste byte-ovi, odnosno binarni podaci.
 Na serverskom delu u implementaciji korišćene su sledeće biblioteke:
@@ -17,7 +68,7 @@ Na serverskom delu u implementaciji korišćene su sledeće biblioteke:
 2. org.clojure/data.json - parsiranje JSON-a
 3. com.novemberain/monger - biblioteka za rad sa Mongo bazom.
 4. http-kit - startovanje rest servera
-5. compojure - rutiranje u okviru server
+5. compojure - rutiranje u okviru servera
 6. com.draines/postal - slanje email-a
 
 API SERVERA:
@@ -62,32 +113,33 @@ OPIS: Sastavlja podatke za tabelu. Sortira cene na menjačnicama za podržane pa
 
 #### URL: /get-ascending-price/:a/:b
 
-OPIS: Vraća sortiranu cenu po menjačnicama u rastućem reposledu za valute :a i :b
+OPIS: Vraća sortiranu cenu po menjačnicama u rastućem redosledu za valute :a i :b
 
 #### 8. METODA: GET
 
 #### URL: /get-descending-price/:a/:b
 
-OPIS: Vraća sortiranu cenu po menjačnicama u opadajućem reposledu za valute :a i :b
+OPIS: Vraća sortiranu cenu po menjačnicama u opadajućem redosledu za valute :a i :b
 
 #### 9. METODA: POST
 
 #### URL: /populate-countries
 
-OPIS: Poziva spoljašnji API: populate-countries "https://restcountries.eu/rest/v2/all" i prikuplja JSON sa svim zamnjama. Obrađuje podatke i čuva dokument u odgovarajućem formatu u kolekciji "countries". 
+OPIS: Poziva spoljašnji API: "https://restcountries.eu/rest/v2/all" i prikuplja JSON sa svim zamnjama. Obrađuje podatke i čuva dokument u odgovarajućem formatu u kolekciji "countries". 
 
-Za rad ove metode neophodan je body JSON: {	"password":"admin" } kako bismo imali određen nivo autentifikacije.
+	Za rad ove metode neophodan je body JSON: {	"password":"admin" } kako bismo imali određen nivo autentifikacije.
 
 #### 10. METODA: POST
 
 #### URL: /populate-exchanges
 
 OPIS: Resetuje podržane menjačnice. Resetovanje se vrši prema hardcodovanim podacima, s obzirom da je potrebno određeno pisanje koda. Kako bi se dodala nova menjačnica potrebno je serverski obezbediti sledeće metode:
+
     1. PRIKUPLJANJE CENA SA SERVERA MENJAČNICE ZA PAR VALUTA
     2. PRIKUPLJANJE SVIH PODRŽANIH PAROVA VALUTA I DODAVANJE ISTIH U BAZU U ODGOVARAJUĆEM FORMATU
     3. DODATI DOKUMENT SA IMENOM, ID-JEM MENJAČNICE I WEBSITE-OM MENJAČNICE.
 
-Ponavljanjem ovog procesa možemo imati mnogo podržanih menjačnica i time obogatiti sadržaj našeg sajta. Pravac daljeg razvoja vodi kad ovome.
+Ponavljanjem ovog procesa možemo imati mnogo podržanih menjačnica i time obogatiti sadržaj našeg sajta. Pravac daljeg razvoja vodi ka ovome.
     
     Za rad ove metode neophodan je body JSON: {	"password":"admin" } kako bismo imali određen nivo autentifikacije.
 
@@ -109,7 +161,7 @@ Primer JSON body dela:
 
     
     {
-	"email":"vofsasdfasdfste@email.com",
+	"email":"voste@email.com",
 	"name":"stevan",
 	"username":"voste",
 	"password":"admin",
@@ -137,14 +189,14 @@ Primer JSON body dela:
 
 #### URL: /register
 
-OPIS: Validira podatke, i vrši registraciju korisnika ubacivanjem odgovarajućeg dokumentau "users" kolekciju.
+OPIS: Validira podatke, i vrši registraciju korisnika ubacivanjem odgovarajućeg dokumenta u "users" kolekciju.
 Ukoliko je prosleđen parametar "admin_password": "admin_password", korisnik će se dalje na klijentu gledati kao admin i imaće određene opcije koje običan klijent nema.
 
 Primer JSON body dela: 
 
     
     {
-	"email":"vofsasdfasdfste@email.com",
+	"email":"voste@email.com",
 	"name":"stevan",
 	"username":"voste",
 	"password":"admin",
@@ -278,7 +330,7 @@ Klijent je Single Page Aplikacija napisana u ClojureScript jeziku i usko je pove
 7. [cljs-http] - biblioteka za slanje http poziva ka serveru
 8. [hickory "0.7.1"] - biblioteka za translaciju HTML-a u Hiccup format
 
-Projekat sadrži Boostrap 4 biblioteku za prikaz responive layout, i mali skin za boje.
+Projekat sadrži Boostrap 4 biblioteku za responive layout, i css skin za boje.
 
 U maloj količini korišćene su i određene JavaScript biblioteke, koje se pozivaju iz ClojureScript-a:
 1. JQuery
@@ -297,11 +349,13 @@ Klijentske stranice:
 #### 1. /
 
 Home page
+
 Sadrži formu za login i registraciju korisnika, navbar, footer, i landing page panel. Komponenta za registraciju popunjava padajući meni za zemlje na osnovu podataka sa servera.
 
 #### 2. /home
 
 Home-logged page
+
 Nakon login-a ili registracije dostupna je ova stranica na kojoj se nalazi grafikon za prikaz cena, tabela za prikaz krugova, navbar i footer. Tabela je popunjana podacima na osnovu matrice koju preuzima sa servera. Grafikon takođe koristi podatke sa servera, a biblioteka koja je korišćena jeste Highchart.js.
 #### 3. /me
 
@@ -319,7 +373,7 @@ Samo admin ima pristup ovoj stranici. Sadrži formu za kačenje blog objave. Inv
 
 Sadrži otvorenu blog objavu. Sa ove strance može se glasati palac gore, palac dole.
 
-## Server instalacija
+## Klijent instalacija
 
 Kako bi klijent radio, potrebno je prvo pokrenuti server, a zatim i klijenta sledećim komandama:
 
